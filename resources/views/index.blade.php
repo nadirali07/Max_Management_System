@@ -27,7 +27,11 @@
 <!-- Custom styles for this template-->
 <!-- <link href="{{ asset('man/css/sb-admin.css')}}" rel="stylesheet"> -->
 
-
+<style type="text/css">
+			#myInput::placeholder {
+				color: white;
+			}
+		</style>
 
 @endsection
 
@@ -494,6 +498,76 @@
 
 					<!-- statistics tab start-->
 					<div role="tabpanel" class="tab-pane" id="statistics">
+						<div class="container my-4">
+							<!-- Icon Cards-->
+							<div class="row">
+								<div class="col-xl-3 col-sm-6 mb-3">
+									<div class="card text-white o-hidden h-100" style="background: rgba(255, 182, 6, 0.5);">
+										<div class="card-body">
+											<div class="card-body-icon">
+												<i class="fas fa-fw fa-comments"></i>
+											</div>
+											<div class="mr-5">26 New Complains!</div>
+										</div>
+										<a class="card-footer text-white clearfix small z-1" href="#">
+											<span class="float-left">View Details</span>
+											<span class="float-right">
+												<i class="fas fa-angle-right"></i>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-sm-6 mb-3">
+									<div class="card text-white o-hidden h-100" style="background: rgba(255, 182, 6, 0.5);">
+										<div class="card-body">
+											<div class="card-body-icon">
+												<i class="fas fa-fw fa-list"></i>
+											</div>
+											<div class="mr-5">11 Todays Orders!</div>
+										</div>
+										<a class="card-footer text-white clearfix small z-1" href="#">
+											<span class="float-left">View Details</span>
+											<span class="float-right">
+												<i class="fas fa-angle-right"></i>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-sm-6 mb-3">
+									<div class="card text-white o-hidden h-100" style="background: rgba(255, 182, 6, 0.5);">
+										<div class="card-body">
+											<div class="card-body-icon">
+												<i class="fas fa-fw fa-shopping-cart"></i>
+											</div>
+											<div class="mr-5">123 weekly Orders!</div>
+										</div>
+										<a class="card-footer text-white clearfix small z-1" href="#">
+											<span class="float-left">View Details</span>
+											<span class="float-right">
+												<i class="fas fa-angle-right"></i>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="col-xl-3 col-sm-6 mb-3">
+									<div class="card text-white o-hidden h-100" style="background: rgba(255, 182, 6, 0.5);">
+										<div class="card-body">
+											<div class="card-body-icon">
+												<i class="fas fa-fw fa-life-ring"></i>
+											</div>
+											<div class="mr-5">1300 Monthly Orders!</div>
+										</div>
+										<a class="card-footer text-white clearfix small z-1" href="#">
+											<span class="float-left">View Details</span>
+											<span class="float-right">
+												<i class="fas fa-angle-right"></i>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
 						<div class="container my-5">
 							<!-- DataTables Example -->
 							<div class="card mb-3 bg-transparent text-white">
@@ -505,72 +579,72 @@
 										<table class="table table-bordered text-white" id="dataTable" width="100%" cellspacing="0" style="font-size: 16px;">
 											<thead class="text-white">
 												<tr>
-														<th>#</th>
-														<th>NAME</th>
-														<th>STATUS</th>
-														<th>DATE</th>
-														<th>PRICE</th>
-													</tr>
+													<th>#</th>
+													<th>NAME</th>
+													<th>STATUS</th>
+													<th>DATE</th>
+													<th>PRICE</th>
+												</tr>
 											</thead>
 											<tfoot>
 												<tr>
-														<th>#</th>
-														<th>NAME</th>
-														<th>STATUS</th>
-														<th>DATE</th>
-														<th>PRICE</th>
-													</tr>
+													<th>#</th>
+													<th>NAME</th>
+													<th>STATUS</th>
+													<th>DATE</th>
+													<th>PRICE</th>
+												</tr>
 											</tfoot>
 											<tbody>
 												<tr>
-														<td>1</td>
-														<td class="txt-oflo">Elite admin</td>
-														<td>SALE</td>
-														<td class="txt-oflo">April 18, 2017</td>
-														<td><span class="text-success">$24</span></td>
-													</tr>
-													<tr>
-														<td>2</td>
-														<td class="txt-oflo">Real Homes WP Theme</td>
-														<td>EXTENDED</td>
-														<td class="txt-oflo">April 19, 2017</td>
-														<td><span class="text-info">$1250</span></td>
-													</tr>
-													<tr>
-														<td>3</td>
-														<td class="txt-oflo">Ample Admin</td>
-														<td>EXTENDED</td>
-														<td class="txt-oflo">April 19, 2017</td>
-														<td><span class="text-info">$1250</span></td>
-													</tr>
-													<tr>
-														<td>4</td>
-														<td class="txt-oflo">Medical Pro WP Theme</td>
-														<td>TAX</td>
-														<td class="txt-oflo">April 20, 2017</td>
-														<td><span class="text-danger">-$24</span></td>
-													</tr>
-													<tr>
-														<td>5</td>
-														<td class="txt-oflo">Hosting press html</td>
-														<td>SALE</td>
-														<td class="txt-oflo">April 21, 2017</td>
-														<td><span class="text-success">$24</span></td>
-													</tr>
-													<tr>
-														<td>6</td>
-														<td class="txt-oflo">Digital Agency PSD</td>
-														<td>SALE</td>
-														<td class="txt-oflo">April 23, 2017</td>
-														<td><span class="text-danger">-$14</span></td>
-													</tr>
-													<tr>
-														<td>7</td>
-														<td class="txt-oflo">Helping Hands WP Theme</td>
-														<td>MEMBER</td>
-														<td class="txt-oflo">April 22, 2017</td>
-														<td><span class="text-success">$64</span></td>
-													</tr>
+													<td>1</td>
+													<td class="txt-oflo">Elite admin</td>
+													<td>SALE</td>
+													<td class="txt-oflo">April 18, 2017</td>
+													<td><span class="text-success">$24</span></td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td class="txt-oflo">Real Homes WP Theme</td>
+													<td>EXTENDED</td>
+													<td class="txt-oflo">April 19, 2017</td>
+													<td><span class="text-info">$1250</span></td>
+												</tr>
+												<tr>
+													<td>3</td>
+													<td class="txt-oflo">Ample Admin</td>
+													<td>EXTENDED</td>
+													<td class="txt-oflo">April 19, 2017</td>
+													<td><span class="text-info">$1250</span></td>
+												</tr>
+												<tr>
+													<td>4</td>
+													<td class="txt-oflo">Medical Pro WP Theme</td>
+													<td>TAX</td>
+													<td class="txt-oflo">April 20, 2017</td>
+													<td><span class="text-danger">-$24</span></td>
+												</tr>
+												<tr>
+													<td>5</td>
+													<td class="txt-oflo">Hosting press html</td>
+													<td>SALE</td>
+													<td class="txt-oflo">April 21, 2017</td>
+													<td><span class="text-success">$24</span></td>
+												</tr>
+												<tr>
+													<td>6</td>
+													<td class="txt-oflo">Digital Agency PSD</td>
+													<td>SALE</td>
+													<td class="txt-oflo">April 23, 2017</td>
+													<td><span class="text-danger">-$14</span></td>
+												</tr>
+												<tr>
+													<td>7</td>
+													<td class="txt-oflo">Helping Hands WP Theme</td>
+													<td>MEMBER</td>
+													<td class="txt-oflo">April 22, 2017</td>
+													<td><span class="text-success">$64</span></td>
+												</tr>
 											</tbody>
 										</table>
 									</div>
@@ -583,7 +657,7 @@
 									<div class="col-md-12 col-lg-12 col-sm-12">
 										<div class=" rounded" style="background: rgba(0, 0, 0, 0.5);">
 											<h3 class="box-title p-3" style="background: rgba(255, 182, 6, 0.5);">Recent Complains</h3>
-											<div class="" style="height: 200px;overflow: auto;">
+											<div class="px-5" style="height: 200px;overflow: auto;">
 												<div class="comment-body">
 													<div class="user-img"> <i class="fas fa-user fa-2x"></i><span class="h4"> Pavan kumar</span>
 													</div>
@@ -623,13 +697,150 @@
 
 					<!-- waiters tab start-->
 					<div role="tabpanel" class="tab-pane" id="Items">
-						
+						<div class="container pt-5">
+							<button class="btn btn-warning">Add New Items</button>
+							
+						</div>
+						<div class="container my-5">
+							<!-- DataTables Example -->
+							<div class="card mb-3 bg-transparent text-white">
+								<div class="card-header" style="font-size: 20px; background: rgba(255, 182, 6, 0.5);">
+									<i class="fas fa-table"></i>
+								Max Restaurant Items</div>
+								<div class="card-body" style="background: rgba(0, 0, 0, 0.5);">
+									<div class="table-responsive">
+										<table class="table table-bordered text-white" id="dataTable" width="100%" cellspacing="0" style="font-size: 16px;">
+											<thead class="text-white">
+												<tr>
+													<th>Item Name</th>
+													<th>Price</th>
+													<th>Available Stock</th>
+													<th>&nbsp;</th>
+													<th>&nbsp;</th>
+												</tr>
+											</thead>
+											<tfoot>
+												<tr>
+													<th>Item Name</th>
+													<th>Price</th>
+													<th>Available Stock</th>
+													<th>&nbsp;</th>
+													<th>&nbsp;</th>
+												</tr>
+											</tfoot>
+											<tbody>
+												<tr>
+													<td>Burger</td>
+													<td>$200</td>
+													<td>30</td>
+													<td class="text-center"><a href="#"><i class="fas fa-edit text-warning"></i></a></td>
+													<td class="text-center"><a href="#"><i class="fas fa-trash-alt text-warning"></i></a></td>
+												</tr>
+												<tr>
+													<td>Burger</td>
+													<td>$200</td>
+													<td>30</td>
+													<td class="text-center"><a href="#"><i class="fas fa-edit text-warning"></i></a></td>
+													<td class="text-center"><a href="#"><i class="fas fa-trash-alt text-warning"></i></a></td>
+												</tr>
+												<tr>
+													<td>Burger</td>
+													<td>$200</td>
+													<td>30</td>
+													<td class="text-center"> <a href="#"><i class="fas fa-edit text-warning"></i></a></td>
+													<td class="text-center"><a href="#"><i class="fas fa-trash-alt text-warning"></i></a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="card-footer small text-white" style="font-size: 12px;background: rgba(255, 182, 6, 0.5);">Updated yesterday at 11:59 PM</div>
+							</div>
+							
+						</div>
+
+
 						
 					</div>
 					<!-- waiters tab end-->
 
 					<!-- report tab start-->
 					<div role="tabpanel" class="tab-pane" id="Members">
+						<div class="container pt-5">
+							<input id="myInput" type="text" placeholder="Search.." class="float-right border-white text-white form-control validate col-lg-3 border-warning" style="border:1px solid; background-color:rgba(255, 182, 6, 0.5);">
+							<script>
+						$(document).ready(function(){
+							$("#myInput").on("keyup", function() {
+								var value = $(this).val().toLowerCase();
+								$("#myTable tr").filter(function() {
+									$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+								});
+							});
+						});
+					</script>
+							
+						</div>
+						<div class="container my-5">
+							<!-- DataTables Example -->
+							<div class="card mb-3 bg-transparent text-white">
+								<div class="card-header" style="font-size: 20px; background: rgba(255, 182, 6, 0.5);">
+									<i class="fas fa-table"></i>
+								Max Restaurant Members</div>
+								<div class="card-body" style="background: rgba(0, 0, 0, 0.5);">
+									<div class="table-responsive">
+										<table class="table table-bordered text-white" id="dataTable" width="50%" cellspacing="0" style="font-size: 16px;">
+											<thead class="text-white">
+												<tr>
+													<th>Member Name</th>
+													<th>Membership No.</th>
+													<th>Membership date</th>
+													<th>Expiring Date</th>
+													
+												</tr>
+											</thead>
+											<tfoot>
+												<tr>
+													<th>Member Name</th>
+													<th>Membership No.</th>
+													<th>Membership date</th>
+													<th>Expiring Date</th>
+													
+												</tr>
+											</tfoot>
+											<tbody id="myTable">
+												<tr>
+													<td>Tiger Nixon</td>
+													<td>AXVF123</td>
+													<td>12-12-12</td>
+													<td>12-12-12</td>
+												</tr>
+												<tr>
+													<td>Tiger Nixon</td>
+													<td>AXVF123</td>
+													<td>12-12-12</td>
+													<td>12-12-12</td>
+												</tr>
+												<tr>
+													<td>Tiger Nixon</td>
+													<td>AXVF123</td>
+													<td>12-12-12</td>
+													<td>12-12-12</td>
+												</tr>
+												<tr>
+													<td>Tiger Nixon</td>
+													<td>AXVF123</td>
+													<td>12-12-12</td>
+													<td>12-12-12</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="card-footer small text-white" style="font-size: 12px;background: rgba(255, 182, 6, 0.5);">Updated yesterday at 11:59 PM</div>
+							</div>
+						</div>
+						
+
 						
 					</div>
 					<!-- report tab end-->
