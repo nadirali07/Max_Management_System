@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,18 +18,18 @@
   <link href="{{ asset('man/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="{{ asset('man/css/sb-admin.css')}}" rel="stylesheet">
+  <!-- <link href="{{ asset('man/css/sb-admin.css')}}" rel="stylesheet"> -->
 
 </head>
 <body>
 	<!-- DataTables Example -->
         <div class="card mb-3 bg-transparent text-white">
-          <div class="card-header" style="font-size: 20px;background: rgba(255, 182, 6, 0.5);">
+          <div class="card-header" style="font-size: 20px; background: rgba(255, 182, 6, 0.5);">
             <i class="fas fa-table"></i>
             Max Restaurant Managment</div>
           <div class="card-body" style="background: rgba(0, 0, 0, 0.5);">
-            <div class="table-responsive" style="font-size: 15px;">
-              <table class="table table-bordered text-white" id="dataTable" width="100%" cellspacing="0">
+            <div class="table-responsive">
+              <table class="table table-bordered text-white" id="dataTable" width="100%" cellspacing="0" style="font-size: 16px;">
                 <thead class="text-white">
                   <tr>
                     <th>Name</th>

@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="{{ asset('https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css') }}" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	
-
-	<link rel="stylesheet" type="text/css" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css') }}" >
-	<link rel="stylesheet" type="text/css" href="{{ asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') }}">
-	<script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js') }}"></script>
-	<script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js') }}"></script>
-	<script src="{{ asset('https://kit.fontawesome.com/585b051251.js') }}" crossorigin="anonymous"></script>
-	<title>Max Administrator</title>
-	<link rel="stylesheet" type="text/css" href="{{ asset('style.css') }}">
+	@yield('head')
 </head>
 <body class="bg">
 @section('header')
@@ -46,20 +32,20 @@
 					<!-- design process steps--> 
 					<!-- Nav tabs -->
 					<ul class="nav nav-tabs process-model more-icon-preocess mx-auto" role="tablist">
-						<li role="presentation" class="active"><a href="#menu" aria-controls="discover" role="tab" data-toggle="tab"><i class="fa fa-hamburger" aria-hidden="true"></i>
+						<li role="presentation" class="active"><a href="#menu" aria-controls="menu" role="tab" data-toggle="tab"><i class="fa fa-hamburger" aria-hidden="true"></i>
 							<p>MENU</p>
 						</a></li>
-						<li role="presentation"><a href="#managment" aria-controls="strategy" role="tab" data-toggle="tab"><i class="fa fa-users" aria-hidden="true" ></i>
+						<li role="presentation"><a href="#managment" aria-controls="managment" role="tab" data-toggle="tab"><i class="fa fa-users" aria-hidden="true" ></i>
 							<p>Managment</p>
 						</a></li>
-						<li role="presentation"><a href="#statistics" aria-controls="optimization" role="tab" data-toggle="tab"><i class="fa fa-qrcode" aria-hidden="true"></i>
+						<li role="presentation"><a href="#statistics" aria-controls="statistics" role="tab" data-toggle="tab"><i class="fa fa-qrcode" aria-hidden="true"></i>
 							<p>Statistics</p>
 						</a></li>
-						<li role="presentation"><a href="#waiters" aria-controls="content" role="tab" data-toggle="tab"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
-							<p>Waiters</p>
+						<li role="presentation"><a href="#Items" aria-controls="Items" role="tab" data-toggle="tab"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+							<p>Items</p>
 						</a></li>
-						<li role="presentation"><a href="#report" aria-controls="reporting" role="tab" data-toggle="tab"><i class="fa fa-clipboard" aria-hidden="true"></i>
-							<p>Report</p>
+						<li role="presentation"><a href="#Members" aria-controls="Members" role="tab" data-toggle="tab"><i class="fa fa-user-check" aria-hidden="true"></i>
+							<p>Max Members</p>
 						</a></li>
 					</ul>
 					<!-- Nav tabs -->
