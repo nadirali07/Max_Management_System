@@ -6,7 +6,7 @@
 <body class="bg">
 @section('header')
 <!-- top bar  -->
-	<div class="container-fluid " style="background: rgba(255, 182, 6, 0.5);">
+	<div class="container-fluid " style="background: #53B4DF;">
 		<div class="container py-1">
 			<div class="row">
 				<div class="col-lg-12">
@@ -22,7 +22,7 @@
 	<!-- top bar  -->
 
 	<!-- nav bar -->
-	<div class="container-fluid " style=" box-shadow: 0px 1px 8px #b37e04;background: rgba(0, 0, 0, 0.5); ">
+	<div class="container-fluid " style=" box-shadow: 0px 1px 8px #1D7CA7;background: #1D7CA7; ">
 		<div class="container mt-4">
 			<div class="row">
 				<div class="col-lg-6 logoimg">

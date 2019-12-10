@@ -15,10 +15,23 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/', function () {
+Route::get('/1', function () {
     return view('index');
 });
-Route::get('/statistics', function () {
-    return view('statistics');
+Route::get('/', function () {
+    return view('admin.index');
 });
+Route::get('/managment', function () {
+    return view('admin.managment');
+});
+Route::get('/statistics', function () {
+    return view('admin.statistics');
+});
+Route::get('/items', function () {
+    return view('admin.items');
+});
+Route::get('/members', function () {
+    return view('admin.members');
+});
+
 
