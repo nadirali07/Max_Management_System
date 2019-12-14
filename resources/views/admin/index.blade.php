@@ -120,7 +120,7 @@
 										<th class="text-center">Ext-Price</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody class="text-center">
 									<tr>
 										<td>Burger</td>
 										<td>3</td>
