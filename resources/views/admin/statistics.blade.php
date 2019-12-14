@@ -197,7 +197,7 @@
 						<i class="fas fa-table"></i>
 						Max Recent Complains
 					</div>
-					<div class="card-body" style="background: rgba(0, 0, 0, 0.4);height: 250px;overflow: auto;">
+					<div class="card-body scroller" style="background: rgba(0, 0, 0, 0.4);height: 250px;">
 						<div class="px-5">
 							<div class="comment-body">
 								<div class="user-img"> <i class="fas fa-user fa-2x"></i><span class="h4"> Pavan kumar</span>

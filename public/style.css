@@ -1,3 +1,22 @@
+html {
+  --scrollbarBG: #1C9CD6 ;
+  --thumbBG: rgba(0, 0, 0, 0.5);
+}
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 2px;
+  border: 1px solid var(--scrollbarBG);
+}
 
 .bg{
 	background-color: #1D7CA7;
@@ -19,12 +38,41 @@
 	height: 360px;
 	overflow-y: scroll;
 }
-
+.scroller::-webkit-scrollbar {
+  width: 11px;
+}
+.scroller {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.scroller::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.scroller::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 2px;
+  border: 1px solid var(--scrollbarBG);
+}
 
 .my-custom-scrollbar {
 position: relative;
 height: 200px;
 overflow: auto;
+}
+.my-custom-scrollbar::-webkit-scrollbar {
+  width: 11px;
+}
+.my-custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.my-custom-scrollbar::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.my-custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 2px;
+  border: 1px solid var(--scrollbarBG);
 }
 .table-wrapper-scroll-y {
 display: block;

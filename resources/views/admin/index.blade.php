@@ -37,7 +37,7 @@
 					</div>											
 				</div>
 				<div class="row">
-					<div class="col-lg-12 rounded bg-white scroller" >
+					<div class="col-lg-12 rounded scroller" style="background: rgba(0, 0, 0, 0.5);">
 						<div class="row my-2">
 							<div class="col-sm-3">
 								<div class="card mt-4">
@@ -111,7 +111,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar ">
-							<table class="table table-light rounded text-center table-hover" >
+							<table class="table table-light rounded text-white " style="background: rgba(0, 0, 0, 0.5);" >
 								<thead>
 									<tr>
 										<th class="text-center">Item Name</th>
@@ -160,30 +160,30 @@
 					<div class="col-sm-4">
 						<form class="form-inline" action="">
 							<label for="coupan" class="text-white font-weight-bold">Coupan No:</label>
-							<input type="text" class="form-control" id="coupan" placeholder="AX25VZ">
+							<input type="text" class="form-control text-white" id="coupan" placeholder="AX25VZ" style="background: rgba(0, 0, 0, 0.5);">
 						</form>
 
 					</div>
 					<div class="col-sm-8">
 						<div class="form-inline float-right">
 							<label for="stotal" class="text-white font-weight-bold">Sub-Total: </label>
-							<input type="number" class="form-control" id="stotal" placeholder="$14.00" readonly>
+							<input type="number" class="form-control text-white" id="stotal" placeholder="$14.00"style="background: rgba(0, 0, 0, 0.5);" readonly>
 						</div>
 						<div class="form-inline mt-3 float-right">
 							<label for="stotal" class="text-white font-weight-bold">Discount: </label>
-							<input type="number" class="form-control" id="stotal" placeholder="-$4.00" readonly>
+							<input type="number" class="form-control text-white" id="stotal" placeholder="-$4.00" style="background: rgba(0, 0, 0, 0.5);" readonly>
 						</div>
 						<div class="form-inline mt-3 float-right">
 							<label for="stotal" class="text-white font-weight-bold">Total: </label>
-							<input type="number" class="form-control" id="stotal" placeholder="$10.00" readonly>
+							<input type="number" class="form-control text-white" id="stotal" placeholder="$10.00" style="background: rgba(0, 0, 0, 0.5);" readonly>
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 text-right">
-						<button class="btn btn-dark">Cancel</button>
-						<button class="btn btn-dark">Print</button>
-						<button class="btn btn-dark">Generate</button>
+						<button class="btn btn-dark text-white">Cancel</button>
+						<button class="btn btn-dark text-white">Print</button>
+						<button class="btn btn-dark text-white">Generate</button>
 					</div>
 				</div>
 			</div>
