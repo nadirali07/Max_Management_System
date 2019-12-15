@@ -15,10 +15,7 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/1', function () {
-    return view('index');
-});
-Route::get('/', function () {
+Route::get('/admin', function () {
     return view('admin.index');
 });
 Route::get('/managment', function () {
