@@ -24,11 +24,17 @@ Route::get('/managment', function () {
 Route::get('/statistics', function () {
     return view('admin.statistics');
 });
-Route::get('/items', function () {
-    return view('admin.items');
-});
+// Route::get('/items', function () {
+//     return view('admin.items');
+// });
+
+Route::resource('items', 'ItemController');
+
 Route::get('/members', function () {
     return view('admin.members');
 });
+
+// Route::resource('products', 'ItemController'); 
+
 
 

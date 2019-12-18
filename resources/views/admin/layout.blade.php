@@ -42,7 +42,7 @@
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
 						<!-- Nav links -->
 						<ul class="nav nav-tabs process-model more-icon-preocess mx-auto">
-							<li role="presentation" class="@yield('menu_active')"><a href="/"><i class="fa fa-hamburger"></i>
+							<li role="presentation" class="@yield('menu_active')"><a href="/admin"><i class="fa fa-hamburger"></i>
 								<p>MENU</p>
 							</a></li>
 							<li role="presentation" class="@yield('m_active')"><a href="/managment"><i class="fa fa-users"></i>
