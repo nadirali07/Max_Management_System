@@ -1,9 +1,14 @@
+
+
 @extends('admin.layout')
 @section('head')
 <link rel="stylesheet" type="text/css" href="{{ asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') }}">
 <!-- Custom fonts for this template-->
 <link href="{{ asset('man/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{{ asset('https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css') }}" >
+
+<!-- <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"> -->
+
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
 @endsection
@@ -30,7 +35,8 @@
 					<div class="card-header font-weight-bold" style="font-size: 20px; background: #1C9CD6;">
 						<i class="fas fa-table"></i>
 						Max Menu Items
-						<button class="btn btn-dark text-light float-right" type="button" data-toggle="modal" data-target="#exampleModalCenter">Add New Items</button>
+						<a class="btn btn-dark text-light float-right" href="javascript:void(0)" id="createNewItem"> Add New Items</a>
+						<!-- <button class="btn btn-dark text-light float-right" type="button" data-toggle="modal" data-target="#exampleModalCenter">Add New Items</button> -->
 					</div>
 					<div class="card-body" style="background: rgba(0, 0, 0, 0.5);">
 						<table id="example" class="table table-bordered text-white" style="width:100%">
@@ -51,97 +57,318 @@
 									<td>{{ $item->item_name }}</td>
 									<td>Rs {{ $item->item_price }}/-</td>
 									<td>{{ $item->item_qty }}</td>
-									<td class="text-center"><a href="#" class="text-white"><i class="fas fa-edit text-primary"></i> Edit</a></td>
+									<td class="text-center">
+										<button href="#" title="edit" class="text-white"><i class="fas fa-edit text-primary" ></i> Edit</button>
+									</td>
 									<td class="text-center">
 										<form action="{{ route('items.destroy', $item->item_id)}}" method="post">
 											{{ csrf_field() }}
 											@method('DELETE')
 											<button class="btn bg-transparent border-0 p-0 text-white" type="submit"><i class="fas fa-trash-alt text-danger"></i> Delete</button>
 										</form>
+									</td>
+								</tr>
+								@endforeach
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>Item ID</th>
+									<th>Item Name</th>
+									<th>Price</th>
+									<th>Available Stock</th>
+									<th>&nbsp;</th>
+									<th>&nbsp;</th>
+								</tr>
+							</tfoot>
+						</table>
 
-										</td>
-									</tr>
-									@endforeach
-								</tbody>
-								<tfoot>
-									<tr>
-										<th>Item ID</th>
-										<th>Item Name</th>
-										<th>Price</th>
-										<th>Available Stock</th>
-										<th>&nbsp;</th>
-										<th>&nbsp;</th>
-									</tr>
-								</tfoot>
-							</table>
-
-						</div>
-						<div class="card-footer small text-white" style=" background: #1C9CD6;">
-							Updated yesterday at 11:59 PM
-						</div>
+					</div>
+					<div class="card-footer small text-white" style=" background: #1C9CD6;">
+						Updated yesterday at 11:59 PM
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
 
-
-	<!-- modal for items start -->
-
-
-	<!-- Modal -->
-	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header bg-dark text-white">
-					<h5 class="modal-title" id="exampleModalLongTitle">NEW ITEM DETAILS:</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<form action="{{ route('items.store') }}" method="POST" enctype="multipart/form-data" name="add_product">
-						{{ csrf_field() }}
-						<div class="form-group">
-							<label>Item Name:</label>
-							<input type="text" name="item_name" id="item_name" class="form-control" placeholder="">
-						</div>
-
-						<div class="form-group">
-							<label> Quantity:</label>
-							<input type="number" name="item_qty" id="item_qty" class="form-control" placeholder="">
-						</div>
-
-						<div class="form-group">
-							<label> Price:</label>
-							<input type="number" name="item_price" id="item_price" class="form-control" placeholder="">
-						</div>
-						<div class="form-group ">
-							<label> Upload Product Image:</label>
-							<input type="file" name="item_img" id="file">
-						</div>
-
-
-					</div>
-					<div class="modal-footer">
-						<button type="submit" class="btn btn-success">Save</button>
-						<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-					</div>
-				</form>
+<!-- ajex modal -->
+<div class="modal fade" id="ajaxModel" aria-hidden="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        	<div class="modal-header bg-dark text-white">
+				<h5 class="modal-title" id="exampleModalLongTitle">NEW ITEM DETAILS:</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
+            <!-- <div class="modal-body">
+                <form id="itemForm" name="itemForm" class="form-horizontal">
+                   <input type="hidden" name="item_id" id="item_id">
+                    <div class="form-group">
+                        <label for="name" class="col-sm-2 control-label">Title</label>
+                        <div class="col-sm-12">
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" value="" maxlength="50" required="">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Details</label>
+                        <div class="col-sm-12">
+                            <textarea id="author" name="author" required="" placeholder="Enter Author" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-offset-2 col-sm-10">
+                     <button type="submit" class="btn btn-primary" id="saveBtn" value="create">Save changes
+                     </button>
+                    </div>
+                </form>
+            </div> -->
+            <div class="modal-body">
+				<form id="itemForm" name="itemForm" method="POST" enctype="multipart/form-data" name="add_product">
+					{{ csrf_field() }}
+					<input type="hidden" name="item_id" id="item_id">
+					<div class="form-group">
+						<label>Item Name:</label>
+						<input type="text" name="item_name" id="item_name" class="form-control" placeholder="">
+					</div>
+
+					<div class="form-group">
+						<label> Quantity:</label>
+						<input type="number" name="item_qty" id="item_qty" class="form-control" placeholder="">
+					</div>
+
+					<div class="form-group">
+						<label> Price:</label>
+						<input type="number" name="item_price" id="item_price" class="form-control" placeholder="">
+					</div>
+					<div class="form-group ">
+						<label> Upload Product Image:</label>
+						<input type="file" name="item_img" id="file">
+					</div>
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-success" id="saveBtn">Save</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</form>
+        </div>
+    </div>
+</div>
+
+
+<!-- ajex modal end -->
+
+
+<!-- modal for items start -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-dark text-white">
+				<h5 class="modal-title" id="exampleModalLongTitle">NEW ITEM DETAILS:</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form action="{{ route('items.store') }}" method="POST" enctype="multipart/form-data" name="add_product">
+					{{ csrf_field() }}
+					<div class="form-group">
+						<label>Item Name:</label>
+						<input type="text" name="item_name" id="item_name" class="form-control" placeholder="">
+					</div>
+
+					<div class="form-group">
+						<label> Quantity:</label>
+						<input type="number" name="item_qty" id="item_qty" class="form-control" placeholder="">
+					</div>
+
+					<div class="form-group">
+						<label> Price:</label>
+						<input type="number" name="item_price" id="item_price" class="form-control" placeholder="">
+					</div>
+					<div class="form-group ">
+						<label> Upload Product Image:</label>
+						<input type="file" name="item_img" id="file">
+					</div>
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-success">Save</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</form>
 		</div>
 	</div>
-	<!-- model end for items -->
-	@endsection
+</div>
+<!-- model end for items -->
 
-	@section('footer')
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#example').DataTable();
-		} );
-	</script>
-	<script src="{{asset('https://code.jquery.com/jquery-3.3.1.js')}}"></script>
-	<script src="{{asset('https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js')}}"></script>
-	<script src="{{asset('https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js')}}"></script>
 
-	@endsection
+<!-- edit modal start-->
+
+<!-- Modal -->
+<div class="modal fade" id="editModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-dark text-white">
+				<h5 class="modal-title" id="exampleModalLongTitle">ITEM DETAILS:</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<form action="{{ route('items.store') }}" method="POST" enctype="multipart/form-data" name="add_product">
+					{{ csrf_field() }}
+					{{ method_field('PUT') }}
+
+					<div class="form-group">
+						<label>Item Name:</label>
+						<input type="text" name="u_item_name" id="u_item_name" class="form-control" placeholder="">
+					</div>
+
+					<div class="form-group">
+						<label> Quantity:</label>
+						<input type="number" name="u_item_qty" id="u_item_qty" class="form-control" placeholder="">
+					</div>
+
+					<div class="form-group">
+						<label> Price:</label>
+						<input type="number" name="u_item_price" id="u_item_price" class="form-control" placeholder="">
+					</div>
+					<div class="form-group ">
+						<label> Upload Product Image:</label>
+						<input type="file" name="item_img" id="file">
+					</div>
+
+
+				</div>
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-success">Save</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
+<!-- edit model end -->
+
+
+
+
+@endsection
+
+@section('footer')
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#example').DataTable();
+	} );
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+<script src="{{asset('https://code.jquery.com/jquery-3.3.1.js')}}"></script>
+<script src="{{asset('https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')}}"></script>
+
+    
+<!-- datatable script -->
+<script type="text/javascript">
+  $(function () {
+      $.ajaxSetup({
+          headers: {
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+          }
+    });
+    // var table = $('.data-table').DataTable({
+    //     processing: true,
+    //     serverSide: true,
+    //     ajax: "{{ route('items.index') }}",
+    //     columns: [
+    //         {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+    //         {data: 'title', name: 'title'},
+    //         {data: 'author', name: 'author'},
+    //         {data: 'action', name: 'action', orderable: false, searchable: false},
+    //     ]
+    // });
+    $('#createNewItem').click(function () {
+        // $('#saveBtn').val("create-item");
+        // $('#item_id').val('');
+        $('#itemForm').trigger("reset");
+        // $('#modelHeading').html("Create New item");
+        $('#ajaxModel').modal('show');
+    });
+   //  $('body').on('click', '.edititem', function () {
+   //    var item_id = $(this).data('id');
+   //    $.get("{{ route('items.index') }}" +'/' + item_id +'/edit', function (data) {
+   //        $('#modelHeading').html("Edit item");
+   //        $('#saveBtn').val("edit-item");
+   //        $('#ajaxModel').modal('show');
+   //        $('#item_id').val(data.id);
+   //        $('#title').val(data.title);
+   //        $('#author').val(data.author);
+   //    })
+   // });
+    $('#saveBtn').click(function (e) {
+    	
+        e.preventDefault();
+        
+        $(this).html('Save');
+        var form = $('#itemForm')[0];
+        var formData = new FormData(form);
+
+        $.ajax({
+          data: formData,
+          url: "{{ route('items.store') }}",
+          method: "POST",
+          dataType: 'JSON',
+          contentType:false,
+          // cache:false,
+          processData:false,
+          
+          success: function (data) {
+
+              $('#itemForm').trigger("reset");
+              $('#ajaxModel').modal('hide');
+              // table.draw();
+              
+
+          },
+          error: function (data) {
+              console.log('Error:', data);
+              $('#saveBtn').html('Save Changes');
+          }
+      });
+    });
+
+    $('body').on('click', '.deleteitem', function () {
+
+        var item_id = $(this).data("id");
+        $confirm = confirm("Are You sure want to delete !");
+        if($confirm == true ){
+            $.ajax({
+                type: "DELETE",
+                url: "{{ route('items.store') }}"+'/'+item_id,
+                success: function (data) {
+                    table.draw();
+                },
+                error: function (data) {
+                    console.log('Error:', data);
+                }
+            });
+        }
+    });
+
+  });
+</script>
+<!-- datatable script -->
+
+@endsection
