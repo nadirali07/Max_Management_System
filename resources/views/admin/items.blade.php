@@ -39,36 +39,18 @@
 						<!-- <button class="btn btn-dark text-light float-right" type="button" data-toggle="modal" data-target="#exampleModalCenter">Add New Items</button> -->
 					</div>
 					<div class="card-body" style="background: rgba(0, 0, 0, 0.5);">
-						<table id="example" class="table table-bordered text-white" style="width:100%">
+						<table class="table table-bordered text-white data-table" style="width:100%">
 							<thead>
 								<tr>
 									<th>Item ID</th>
 									<th>Item Name</th>
 									<th>Price</th>
 									<th>Available Stock</th>
-									<th>&nbsp;</th>
-									<th>&nbsp;</th>
+									<th width="150px">Action</th>
 								</tr>
 							</thead>
-							<tbody>
-								@foreach($items as $item)
-								<tr>
-									<td>{{ $item->item_id }}</td>
-									<td>{{ $item->item_name }}</td>
-									<td>Rs {{ $item->item_price }}/-</td>
-									<td>{{ $item->item_qty }}</td>
-									<td class="text-center">
-										<button href="#" title="edit" class="text-white"><i class="fas fa-edit text-primary" ></i> Edit</button>
-									</td>
-									<td class="text-center">
-										<form action="{{ route('items.destroy', $item->item_id)}}" method="post">
-											{{ csrf_field() }}
-											@method('DELETE')
-											<button class="btn bg-transparent border-0 p-0 text-white" type="submit"><i class="fas fa-trash-alt text-danger"></i> Delete</button>
-										</form>
-									</td>
-								</tr>
-								@endforeach
+							<tbody >
+								
 							</tbody>
 							<tfoot>
 								<tr>
@@ -76,12 +58,10 @@
 									<th>Item Name</th>
 									<th>Price</th>
 									<th>Available Stock</th>
-									<th>&nbsp;</th>
-									<th>&nbsp;</th>
+									<th width="150px">Action</th>
 								</tr>
 							</tfoot>
 						</table>
-
 					</div>
 					<div class="card-footer small text-white" style=" background: #1C9CD6;">
 						Updated yesterday at 11:59 PM
@@ -94,10 +74,10 @@
 
 <!-- ajex modal -->
 <div class="modal fade" id="ajaxModel" aria-hidden="true" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-        	<div class="modal-header bg-dark text-white">
-				<h5 class="modal-title" id="exampleModalLongTitle">NEW ITEM DETAILS:</h5>
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header bg-dark text-white">
+				<h5 class="modal-title" id="modelHeading">NEW ITEM DETAILS:</h5>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -126,35 +106,35 @@
                 </form>
             </div> -->
             <div class="modal-body">
-				<form id="itemForm" name="itemForm" method="POST" enctype="multipart/form-data" name="add_product">
-					{{ csrf_field() }}
-					<input type="hidden" name="item_id" id="item_id">
-					<div class="form-group">
-						<label>Item Name:</label>
-						<input type="text" name="item_name" id="item_name" class="form-control" placeholder="">
-					</div>
+            	<form id="itemForm" name="itemForm" method="POST" enctype="multipart/form-data" name="add_product">
+            		{{ csrf_field() }}
+            		<input type="hidden" name="item_id" id="item_id">
+            		<div class="form-group">
+            			<label>Item Name:</label>
+            			<input type="text" name="item_name" id="item_name" class="form-control" placeholder="">
+            		</div>
 
-					<div class="form-group">
-						<label> Quantity:</label>
-						<input type="number" name="item_qty" id="item_qty" class="form-control" placeholder="">
-					</div>
+            		<div class="form-group">
+            			<label> Quantity:</label>
+            			<input type="number" name="item_qty" id="item_qty" class="form-control" placeholder="">
+            		</div>
 
-					<div class="form-group">
-						<label> Price:</label>
-						<input type="number" name="item_price" id="item_price" class="form-control" placeholder="">
-					</div>
-					<div class="form-group ">
-						<label> Upload Product Image:</label>
-						<input type="file" name="item_img" id="file">
-					</div>
+            		<div class="form-group">
+            			<label> Price:</label>
+            			<input type="number" name="item_price" id="item_price" class="form-control" placeholder="">
+            		</div>
+            		<div class="form-group ">
+            			<label> Upload Product Image:</label>
+            			<input type="file" name="item_img" id="file">
+            		</div>
 
 
-				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-success" id="saveBtn">Save</button>
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-				</div>
-			</form>
+            	</div>
+            	<div class="modal-footer">
+            		<button type="submit" class="btn btn-success" id="saveBtn">Save</button>
+            		<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            	</div>
+            </form>
         </div>
     </div>
 </div>
@@ -167,7 +147,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 	<div class="modal-dialog modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header bg-dark text-white">
@@ -207,7 +187,7 @@
 			</form>
 		</div>
 	</div>
-</div>
+</div> -->
 <!-- model end for items -->
 
 
@@ -279,83 +259,87 @@
 <script src="{{asset('https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js')}}"></script>
 <script src="{{asset('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')}}"></script>
 
-    
+
 <!-- datatable script -->
 <script type="text/javascript">
-  $(function () {
-      $.ajaxSetup({
-          headers: {
-              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          }
-    });
-    // var table = $('.data-table').DataTable({
-    //     processing: true,
-    //     serverSide: true,
-    //     ajax: "{{ route('items.index') }}",
-    //     columns: [
-    //         {data: 'DT_RowIndex', name: 'DT_RowIndex'},
-    //         {data: 'title', name: 'title'},
-    //         {data: 'author', name: 'author'},
-    //         {data: 'action', name: 'action', orderable: false, searchable: false},
-    //     ]
-    // });
-    $('#createNewItem').click(function () {
+	$(function () {
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+		var table = $('.data-table').DataTable({
+			processing: true,
+			serverSide: true,
+			ajax: "{{ route('items.index') }}",
+			columns: [
+			{data: 'DT_RowIndex', name: 'DT_RowIndex'},
+			{data: 'item_name', name: 'item_name'},
+			{data: 'item_qty', name: 'item_qty'},
+			{data: 'item_price', name: 'item_price'},
+			{data: 'action', name: 'action', orderable: false, searchable: false},
+			]
+		});
+		$('#createNewItem').click(function () {
         // $('#saveBtn').val("create-item");
         // $('#item_id').val('');
         $('#itemForm').trigger("reset");
         // $('#modelHeading').html("Create New item");
         $('#ajaxModel').modal('show');
     });
-   //  $('body').on('click', '.edititem', function () {
-   //    var item_id = $(this).data('id');
-   //    $.get("{{ route('items.index') }}" +'/' + item_id +'/edit', function (data) {
-   //        $('#modelHeading').html("Edit item");
-   //        $('#saveBtn').val("edit-item");
-   //        $('#ajaxModel').modal('show');
-   //        $('#item_id').val(data.id);
-   //        $('#title').val(data.title);
-   //        $('#author').val(data.author);
-   //    })
-   // });
-    $('#saveBtn').click(function (e) {
-    	
-        e.preventDefault();
-        
-        $(this).html('Save');
-        var form = $('#itemForm')[0];
-        var formData = new FormData(form);
+    $('body').on('click', '.edititem', function () {
+      var item_id = $(this).data('id');
 
-        $.ajax({
-          data: formData,
-          url: "{{ route('items.store') }}",
-          method: "POST",
-          dataType: 'JSON',
-          contentType:false,
+      $.get("{{ route('items.index') }}" +'/' + item_id +'/edit', function (data) {
+          $('#modelHeading').html("EDIT ITEM DETAILS:");
+          $('#saveBtn').val("edit-item");
+          $('#ajaxModel').modal('show');
+          $('#item_id').val(data.item_id);
+          $('#item_name').val(data.item_name);
+          $('#item_qty').val(data.item_qty);
+          $('#item_price').val(data.item_price);
+          $('#item_img').val(data.item_img);
+      })
+   });
+   $('#saveBtn').click(function (e) {
+
+   	e.preventDefault();
+
+   	$(this).html('Save');
+   	var form = $('#itemForm')[0];
+   	var formData = new FormData(form);
+
+   	$.ajax({
+   		data: formData,
+   		url: "{{ route('items.store') }}",
+   		method: "POST",
+   		dataType: 'JSON',
+   		contentType:false,
           // cache:false,
           processData:false,
           
           success: function (data) {
 
-              $('#itemForm').trigger("reset");
-              $('#ajaxModel').modal('hide');
-              // table.draw();
+          	$('#itemForm').trigger("reset");
+          	$('#ajaxModel').modal('hide');
+              table.draw();
               
 
           },
           error: function (data) {
-              console.log('Error:', data);
-              $('#saveBtn').html('Save Changes');
+          	console.log('Error:', data);
+          	$('#saveBtn').html('Save Changes');
           }
       });
-    });
+   });
 
-    $('body').on('click', '.deleteitem', function () {
+   $('body').on('click', '.deleteitem', function () {
 
         var item_id = $(this).data("id");
         $confirm = confirm("Are You sure want to delete !");
         if($confirm == true ){
             $.ajax({
-                type: "DELETE",
+                method: "DELETE",
                 url: "{{ route('items.store') }}"+'/'+item_id,
                 success: function (data) {
                     table.draw();
@@ -367,7 +351,7 @@
         }
     });
 
-  });
+});
 </script>
 <!-- datatable script -->
 

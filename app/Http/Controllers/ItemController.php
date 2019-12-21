@@ -15,10 +15,31 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    // public function index()
+    // {
+    //     $data['items'] = Item::orderBy('item_id','desc')->paginate(10);
+    //     return view('admin.items',$data);
+    // }
+
+    public function index(Request $request)
     {
-        $data['items'] = Item::orderBy('item_id','desc')->paginate(10);
-        return view('admin.items',$data);
+        if ($request->ajax()) {
+            $data = Item::latest()->get();
+            return Datatables::of($data)
+            ->addIndexColumn()
+            ->addColumn('action', function($row){
+
+             $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->item_id.'" data-original-title="Edit" class="edit btn btn-primary bg-transparent border-0 edititem"><i class="fas fa-edit text-primary" ></i> Edit</a>';
+
+             $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->item_id.'" data-original-title="Delete" class="btn btn-danger btn-sm deleteitem bg-transparent border-0"><i class="fas fa-trash-alt text-danger "></i> Delete</a>';
+
+             return $btn;
+         })
+            ->rawColumns(['action'])
+            ->make(true);
+        }
+
+        return view('admin.items');
     }
 
     /**
@@ -67,22 +88,22 @@ class ItemController extends Controller
     public function store(Request $request)
     {
         if ($request->hasfile('item_img')) {
-         $file=$request->file('item_img');
-         $extension=$file->getClientOriginalName();
-         $filename=rand(). "." . $extension;
-         $file->move(public_path()."/images",$filename);
-     }
-     else
-     {
+           $file=$request->file('item_img');
+           $extension=$file->getClientOriginalName();
+           $filename=rand(). "." . $extension;
+           $file->move(public_path()."/images",$filename);
+       }
+       else
+       {
         $filename="";
         return $request;
         
     }
-        Item::updateOrCreate(['item_id' => $request->item_id],
-                ['item_name' => $request->item_name, 'item_qty' => $request->item_qty, 'item_price' => $request->item_price, 'item_img' => $filename]);
+    Item::updateOrCreate(['item_id' => $request->item_id],
+        ['item_name' => $request->item_name, 'item_qty' => $request->item_qty, 'item_price' => $request->item_price, 'item_img' => $filename]);
 
-        return response()->json(['success'=>'Item saved successfully.']);
-    }
+    return response()->json(['success'=>'Item saved successfully.']);
+}
 
     /**
      * Display the specified resource.
@@ -103,7 +124,8 @@ class ItemController extends Controller
      */
     public function edit($id)
     {
-        //
+        $item = Item::find($id);
+        return response()->json($item);
     }
 
     /**
@@ -124,9 +146,10 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($item_id)
+    public function destroy($id)
     {
-        Item::where('item_id',$item_id)->delete();
-        return Redirect::to('items')->with('success','Product deleted successfully');
+        Item::find($id)->delete();
+
+        return response()->json(['success'=>'Item deleted successfully.']);
     }
 }
