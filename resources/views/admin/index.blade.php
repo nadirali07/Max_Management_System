@@ -5,10 +5,10 @@
 <link href="{{ asset('man/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
 <style type="text/css">
 	.itemhover:hover{
-  background-color: #53B4DF;
-  color: white;
-  cursor: pointer;
-}
+		background-color: #53B4DF;
+		color: white;
+		cursor: pointer;
+	}
 </style>
 
 @endsection
@@ -40,14 +40,14 @@
 					</div>
 					<div class="col-lg-6 col-sm-6">
 						<div class="form-group">
-							<input type="number" class="form-control p-1 text-center font-weight-bold rounded" id="qty" placeholder="QUANTITY">
+							<input type="number" class="form-control p-1 text-center font-weight-bold rounded" id="qty" onfocus=this.value='' placeholder="QUANTITY">
 						</div>
 					</div>											
 				</div>
 				<div class="row">
 					<div class="col-lg-12 rounded scroller" style="background: rgba(0, 0, 0, 0.5);">
 						<div class="row my-2">
-              				@foreach($items as $item)
+							@foreach($items as $item)
 							<div class="col-sm-3">
 								<div class="card mt-4 itemhover" onclick="addrow('{{ $item->item_name }}','{{ $item->item_price }}')">
 									<img class="card-img-top pimg mx-auto my-3" src="images/{{ $item->item_img }}" alt="Card image cap">
@@ -120,49 +120,55 @@
 				</div>
 				<script type="text/javascript">
 					function addrow(item_name,item_price) {
-				var t = document.getElementById("table");
-				var totalrows = document.getElementById("table").rows.length;
-				var row = table.insertRow(totalrows);
-				var c1 = row.insertCell(0);
-				var c2 = row.insertCell(1);
-				var c3 = row.insertCell(2);
-				var c4 = row.insertCell(3);
-				var c5 = row.insertCell(4);
-				var qty=document.getElementById("qty").value;
-				var cqty;
-				var totalprice;
-				if (qty=="") {
-					cqty=1;
-				}
-				else
-				{
-					cqty=qty;
-				}
-				
-				var p=item_price;
-				totalprice=cqty*p;
+						var t = document.getElementById("table");
+						var totalrows = document.getElementById("table").rows.length;
+						var row = table.insertRow(totalrows);
+						var c1 = row.insertCell(0);
+						var c2 = row.insertCell(1);
+						var c3 = row.insertCell(2);
+						var c4 = row.insertCell(3);
+						var c5 = row.insertCell(4);
+						var qty=document.getElementById("qty").value;
+						var cqty;
+						var totalprice;
+						if (qty=="") {
+							cqty=1;
+						}
+						else
+						{
+							cqty=qty;
+						}
 
+						var p=item_price;
+						totalprice=cqty*p;
+						c1.innerHTML = item_name;
+						c2.innerHTML = cqty;
+						c3.innerHTML = item_price;
+						c4.innerHTML = totalprice;
+						c5.innerHTML ='<button type="button" class="btn btn bg-transparent border-0"><i class="fas fa-trash-alt text-danger "></i></button>';
 
-				c1.innerHTML = item_name;
-				c2.innerHTML = cqty;
-				c3.innerHTML = item_price;
-				c4.innerHTML = totalprice;
-
-
-
-
-        }
+						var index;
+						for(var i = 1; i < t.rows.length; i++)
+						{
+							t.rows[i].cells[4].onclick = function()
+							{
+								index = this.parentElement.rowIndex;
+								t.deleteRow(index);
+							};
+						}
+					}
 				</script>
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar ">
-							<table class="table table-light rounded text-white saletable " id="table" style="background: rgba(0, 0, 0, 0.5);" >
+							<table class="table table-light rounded text-white saletable " border="1" id="table" style="background: rgba(0, 0, 0, 0.5);" >
 								<thead>
 									<tr>
-										<th scope="col" class="text-center">Item Name</th>
-										<th scope="col" class="text-center">Qty</th>
-										<th scope="col" class="text-center">Price</th>
-										<th scope="col" class="text-center">Ext-Price</th>
+										<th scope="col" >Item Name</th>
+										<th scope="col" >Qty</th>
+										<th scope="col" >Price</th>
+										<th scope="col" >Ext-Price</th>
+										<th scope="col" >&nbsp;</th>
 									</tr>
 								</thead>
 								<tbody class="text-center">
@@ -215,12 +221,12 @@
 							<input type="number" class="form-control text-white" id="stotal" placeholder="$14.00"style="background: rgba(0, 0, 0, 0.5);" readonly>
 						</div>
 						<div class="form-inline mt-3 float-right">
-							<label for="stotal" class="text-white font-weight-bold">Discount: </label>
-							<input type="number" class="form-control text-white" id="stotal" placeholder="-$4.00" style="background: rgba(0, 0, 0, 0.5);" readonly>
+							<label for="discount" class="text-white font-weight-bold">Discount: </label>
+							<input type="number" class="form-control text-white" id="sdiscount" placeholder="-$4.00" style="background: rgba(0, 0, 0, 0.5);" readonly>
 						</div>
 						<div class="form-inline mt-3 float-right">
 							<label for="stotal" class="text-white font-weight-bold">Total: </label>
-							<input type="number" class="form-control text-white" id="stotal" placeholder="$10.00" style="background: rgba(0, 0, 0, 0.5);" readonly>
+							<input type="number" class="form-control text-white" id="dtotal" placeholder="$10.00" style="background: rgba(0, 0, 0, 0.5);" readonly>
 						</div>
 					</div>
 				</div>
@@ -228,11 +234,46 @@
 					<div class="col-lg-12 text-right">
 						<button class="btn btn-dark text-white">Cancel</button>
 						<button class="btn btn-dark text-white">Print</button>
-						<button class="btn btn-dark text-white">Generate</button>
+						<button class="btn btn-dark text-white" onclick="getSum()">Generate</button>
+						<span id="sumV"></span>
 					</div>
 				</div>
 			</div>
 			<!-- right side div -->
+
+			<script type="text/javascript">
+				// caculate total/sum value
+				var table = document.getElementById("table");
+            function getSum()
+            {
+            	sumVal = 0;
+              for(var i = 1; i < table.rows.length; i++){
+                     sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
+              }
+              document.getElementById("stotal").value = sumVal;
+              var coupan=document.getElementById("coupan").value;
+              var discount=50;
+              var total=sumVal;
+              if (coupan=="123") {
+              	if (discount<sumVal) {
+              		total=sumVal-discount;
+              	}
+              	else
+              	{
+              		total=0;
+              	}
+              }
+          else
+          {
+          	total=sumVal;
+          	discount=0;
+
+          }
+          document.getElementById("sdiscount").value = discount;
+              document.getElementById("dtotal").value = total;
+               console.log("Sum => "+sumVal);       
+            }
+			</script>
 		</div>
 
 	</div>
