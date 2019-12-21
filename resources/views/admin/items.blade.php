@@ -44,23 +44,23 @@
 								<tr>
 									<th>Item ID</th>
 									<th>Item Name</th>
-									<th>Price</th>
 									<th>Available Stock</th>
+									<th>Price</th>
 									<th width="150px">Action</th>
 								</tr>
 							</thead>
 							<tbody >
 								
 							</tbody>
-							<tfoot>
+							<!-- <tfoot>
 								<tr>
 									<th>Item ID</th>
 									<th>Item Name</th>
-									<th>Price</th>
 									<th>Available Stock</th>
+									<th>Price</th>
 									<th width="150px">Action</th>
 								</tr>
-							</tfoot>
+							</tfoot> -->
 						</table>
 					</div>
 					<div class="card-footer small text-white" style=" background: #1C9CD6;">

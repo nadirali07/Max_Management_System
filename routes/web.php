@@ -16,7 +16,8 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/admin', function () {
-    return view('admin.index');
+	$items= \App\Item::all();
+	return view('admin.index',compact('items'));
 });
 Route::get('/managment', function () {
     return view('admin.managment');
@@ -29,6 +30,7 @@ Route::get('/statistics', function () {
 // });
 
 Route::resource('items', 'ItemController');
+Route::resource('sales', 'SaleController');
 
 Route::get('/members', function () {
     return view('admin.members');

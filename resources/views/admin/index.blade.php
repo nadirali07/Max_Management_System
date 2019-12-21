@@ -3,6 +3,14 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') }}">
 <!-- Custom fonts for this template-->
 <link href="{{ asset('man/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+<style type="text/css">
+	.itemhover:hover{
+  background-color: #53B4DF;
+  color: white;
+  cursor: pointer;
+}
+</style>
+
 @endsection
 
 
@@ -32,22 +40,24 @@
 					</div>
 					<div class="col-lg-6 col-sm-6">
 						<div class="form-group">
-							<input type="number" class="form-control p-1 text-center font-weight-bold rounded" placeholder="QUANTITY">
+							<input type="number" class="form-control p-1 text-center font-weight-bold rounded" id="qty" placeholder="QUANTITY">
 						</div>
 					</div>											
 				</div>
 				<div class="row">
 					<div class="col-lg-12 rounded scroller" style="background: rgba(0, 0, 0, 0.5);">
 						<div class="row my-2">
+              				@foreach($items as $item)
 							<div class="col-sm-3">
-								<div class="card mt-4">
-									<img class="card-img-top pimg mx-auto my-3" src="images/coke.png" alt="Card image cap">
+								<div class="card mt-4 itemhover" onclick="addrow('{{ $item->item_name }}','{{ $item->item_price }}')">
+									<img class="card-img-top pimg mx-auto my-3" src="images/{{ $item->item_img }}" alt="Card image cap">
 									<div class="card-body p-1 text-center" style="background-color: #1D7CA7;">
-										<span class="font-weight-bold text-white">Coke Tin</span>
+										<span class="font-weight-bold text-white">{{ $item->item_name }}</span>
 									</div>
 								</div>
 							</div>
-							<div class="col-sm-3">
+							@endforeach
+							<!-- <div class="col-sm-3">
 								<div class="card mt-4">
 									<img class="card-img-top pimg mx-auto my-3" src="images/fanta.png" alt="Card image cap">
 									<div class="card-body p-1 text-center"style="background-color: #1D7CA7;">
@@ -86,7 +96,7 @@
 										<span class="font-weight-bold text-white">cocktail juice</span>
 									</div>
 								</div>
-							</div>		
+							</div> -->		
 						</div>
 					</div>
 				</div>
@@ -108,20 +118,61 @@
 					</div>
 
 				</div>
+				<script type="text/javascript">
+					function addrow(item_name,item_price) {
+				var t = document.getElementById("table");
+				var totalrows = document.getElementById("table").rows.length;
+				var row = table.insertRow(totalrows);
+				var c1 = row.insertCell(0);
+				var c2 = row.insertCell(1);
+				var c3 = row.insertCell(2);
+				var c4 = row.insertCell(3);
+				var c5 = row.insertCell(4);
+				var qty=document.getElementById("qty").value;
+				var cqty;
+				var totalprice;
+				if (qty=="") {
+					cqty=1;
+				}
+				else
+				{
+					cqty=qty;
+				}
+				
+				var p=item_price;
+				totalprice=cqty*p;
+
+
+				c1.innerHTML = item_name;
+				c2.innerHTML = cqty;
+				c3.innerHTML = item_price;
+				c4.innerHTML = totalprice;
+
+
+
+
+        }
+				</script>
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar ">
-							<table class="table table-light rounded text-white " style="background: rgba(0, 0, 0, 0.5);" >
+							<table class="table table-light rounded text-white saletable " id="table" style="background: rgba(0, 0, 0, 0.5);" >
 								<thead>
 									<tr>
-										<th class="text-center">Item Name</th>
-										<th class="text-center">Qty</th>
-										<th class="text-center">Price</th>
-										<th class="text-center">Ext-Price</th>
+										<th scope="col" class="text-center">Item Name</th>
+										<th scope="col" class="text-center">Qty</th>
+										<th scope="col" class="text-center">Price</th>
+										<th scope="col" class="text-center">Ext-Price</th>
 									</tr>
 								</thead>
 								<tbody class="text-center">
-									<tr>
+									<!-- <tr scope="row">
+										<td>Burger</td>
+										<td>3</td>
+										<td>90</td>
+										<td>270</td>
+									</tr> -->
+									<!-- <tr>
 										<td>Burger</td>
 										<td>3</td>
 										<td>90</td>
@@ -144,13 +195,7 @@
 										<td>3</td>
 										<td>90</td>
 										<td>270</td>
-									</tr>
-									<tr>
-										<td>Burger</td>
-										<td>3</td>
-										<td>90</td>
-										<td>270</td>
-									</tr>
+									</tr> -->
 								</tbody>
 							</table>
 						</div>

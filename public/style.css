@@ -1,3 +1,5 @@
+
+
 html {
   --scrollbarBG: #1C9CD6 ;
   --thumbBG: rgba(0, 0, 0, 0.5);
@@ -26,6 +28,8 @@ body::-webkit-scrollbar-thumb {
 .cy{
 	background-color: #f5b22d;
 }
+
+
 
 .pimg{
 	height: 40px;
