@@ -45,7 +45,7 @@
 							<li role="presentation" class="@yield('menu_active')"><a href="/admin"><i class="fa fa-hamburger"></i>
 								<p>MENU</p>
 							</a></li>
-							<li role="presentation" class="@yield('m_active')"><a href="/managment"><i class="fa fa-users"></i>
+							<li role="presentation" class="@yield('m_active')"><a href="/management"><i class="fa fa-users"></i>
 								<p>Managment</p>
 							</a></li>
 							<li role="presentation" class="@yield('s_active')"><a href="/statistics"><i class="fa fa-qrcode"></i>

@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;  
-use App\Item;
+use Illuminate\Http\Request;
+  
+use App\management;
 use Redirect;
 use PDF;
 use DataTables;
 
-class ItemController extends Controller
+class MController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,28 +25,30 @@ class ItemController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = Item::latest()->get();
+            $data = management::latest()->get();
             return Datatables::of($data)
             ->addIndexColumn()
-            ->editColumn('item_price', function ($orders) {
-                  return 'Rs '.$orders->item_price.'/-';
-           })
-            
+            ->addColumn('join', function($row){
 
-            ->addColumn('action', function($row){
-
-             $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->item_id.'" data-original-title="Edit" class="edit btn btn-primary bg-transparent border-0 edititem"><i class="fas fa-edit text-primary" ></i> Edit</a>';
-
-             $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->item_id.'" data-original-title="Delete" class="btn btn-danger btn-sm deleteitem bg-transparent border-0"><i class="fas fa-trash-alt text-danger "></i> Delete</a>';
+             $btn = '<span>'.$row->created_at.'</span>';
 
              return $btn;
          })
-            ->rawColumns(['action','item_price'])
+
+            ->addColumn('action', function($row){
+
+             $btn = '<a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->mem_id.'" data-original-title="Edit" class="edit btn btn-primary bg-transparent border-0 editmem"><i class="fas fa-edit text-primary" ></i> Edit</a>';
+
+             $btn = $btn.' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="'.$row->mem_id.'" data-original-title="Delete" class="btn btn-danger btn-sm deletemem bg-transparent border-0"><i class="fas fa-trash-alt text-danger "></i> Delete</a>';
+
+             return $btn;
+         })
+            ->rawColumns(['action','join'])
             ->make(true);
 
         }
 
-        return view('admin.items');
+        return view('admin.managment');
     }
 
     /**
@@ -93,20 +96,8 @@ class ItemController extends Controller
 // }
     public function store(Request $request)
     {
-        if ($request->hasfile('item_img')) {
-           $file=$request->file('item_img');
-           $extension=$file->getClientOriginalName();
-           $filename=rand(). "." . $extension;
-           $file->move(public_path()."/images",$filename);
-       }
-       else
-       {
-        $filename="";
-        return $request;
-        
-    }
-    Item::updateOrCreate(['item_id' => $request->item_id],
-        ['item_name' => $request->item_name, 'item_qty' => $request->item_qty, 'item_price' => $request->item_price, 'item_img' => $filename]);
+    management::updateOrCreate(['mem_id' => $request->mem_id],
+        ['mem_name' => $request->mem_name, 'position' => $request->position, 'age' => $request->age, 'salary' => $request->salary]);
 
     return response()->json(['success'=>'Item saved successfully.']);
 }
@@ -130,8 +121,8 @@ class ItemController extends Controller
      */
     public function edit($id)
     {
-        $item = Item::find($id);
-        return response()->json($item);
+        $management = management::find($id);
+        return response()->json($management);
     }
 
     /**
@@ -141,7 +132,7 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $item_id)
+    public function update(Request $request, $mem_id)
     {
         //
     }
@@ -154,8 +145,8 @@ class ItemController extends Controller
      */
     public function destroy($id)
     {
-        Item::find($id)->delete();
+        management::find($id)->delete();
 
-        return response()->json(['success'=>'Item deleted successfully.']);
+        return response()->json(['success'=>'management deleted successfully.']);
     }
 }

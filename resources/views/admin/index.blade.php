@@ -3,14 +3,8 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') }}">
 <!-- Custom fonts for this template-->
 <link href="{{ asset('man/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-<style type="text/css">
-	.itemhover:hover{
-		background-color: #53B4DF;
-		color: white;
-		cursor: pointer;
-	}
-</style>
-
+<link rel="stylesheet" type="text/css" href="{{ asset('https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css') }}" >
+<meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 
 
@@ -27,6 +21,10 @@
 
 @section('content')
 <!-- body -->
+<div class="container">
+
+	
+</div>
 <div class="container-fluid" style="" >
 	<div class="container">
 		<div class="row py-5">
@@ -145,7 +143,8 @@
 						c2.innerHTML = cqty;
 						c3.innerHTML = item_price;
 						c4.innerHTML = totalprice;
-						c5.innerHTML ='<button type="button" class="btn btn bg-transparent border-0"><i class="fas fa-trash-alt text-danger "></i></button>';
+						c5.innerHTML ='<button type="button" class="btn btn bg-transparent border-0 p-0"><i class="fas fa-trash-alt text-danger "></i></button>';
+						document.getElementById("qty").value = "";
 
 						var index;
 						for(var i = 1; i < t.rows.length; i++)
@@ -157,11 +156,30 @@
 							};
 						}
 					}
+
+
+
+					function deltable() {
+						var t = document.getElementById("table");
+						var totalrows = document.getElementById("table").rows.length;
+						document.getElementById("coupan").value = "";
+						document.getElementById("stotal").value = "";
+						document.getElementById("sdiscount").value = "";
+						document.getElementById("dtotal").value = "";
+						
+
+						var index;
+						for(var i = 1; i < t.rows.length; i++)
+						{
+							t.deleteRow(i);
+							deltable();	
+						}
+					}
 				</script>
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar ">
-							<table class="table table-light rounded text-white saletable " border="1" id="table" style="background: rgba(0, 0, 0, 0.5);" >
+						<div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar " style="background: rgba(0, 0, 0, 0.5);">
+							<table class="table table-light rounded text-white saletable  " border="1" id="table" style="background: rgba(0, 0, 0, 0.1);" >
 								<thead>
 									<tr>
 										<th scope="col" >Item Name</th>
@@ -172,107 +190,78 @@
 									</tr>
 								</thead>
 								<tbody class="text-center">
-									<!-- <tr scope="row">
-										<td>Burger</td>
-										<td>3</td>
-										<td>90</td>
-										<td>270</td>
-									</tr> -->
-									<!-- <tr>
-										<td>Burger</td>
-										<td>3</td>
-										<td>90</td>
-										<td>270</td>
-									</tr>
-									<tr>
-										<td>Burger</td>
-										<td>3</td>
-										<td>90</td>
-										<td>270</td>
-									</tr>
-									<tr>
-										<td>Burger</td>
-										<td>3</td>
-										<td>90</td>
-										<td>270</td>
-									</tr>
-									<tr>
-										<td>Burger</td>
-										<td>3</td>
-										<td>90</td>
-										<td>270</td>
-									</tr> -->
+									
 								</tbody>
 							</table>
 						</div>
 					</div>											
 				</div>
-				<div class="row py-3">
-					<div class="col-sm-4">
-						<form class="form-inline" action="">
+				<form id="saleForm" name="saleForm" method="POST">
+					{{ csrf_field() }}
+					<input type="hidden" name="order_no" id="order_no">
+					<div class="row py-3">
+						<div class="col-sm-4">
 							<label for="coupan" class="text-white font-weight-bold">Coupan No:</label>
 							<input type="text" class="form-control text-white" id="coupan" placeholder="AX25VZ" style="background: rgba(0, 0, 0, 0.5);">
-						</form>
-
-					</div>
-					<div class="col-sm-8">
-						<div class="form-inline float-right">
-							<label for="stotal" class="text-white font-weight-bold">Sub-Total: </label>
-							<input type="number" class="form-control text-white" id="stotal" placeholder="$14.00"style="background: rgba(0, 0, 0, 0.5);" readonly>
 						</div>
-						<div class="form-inline mt-3 float-right">
-							<label for="discount" class="text-white font-weight-bold">Discount: </label>
-							<input type="number" class="form-control text-white" id="sdiscount" placeholder="-$4.00" style="background: rgba(0, 0, 0, 0.5);" readonly>
-						</div>
-						<div class="form-inline mt-3 float-right">
-							<label for="stotal" class="text-white font-weight-bold">Total: </label>
-							<input type="number" class="form-control text-white" id="dtotal" placeholder="$10.00" style="background: rgba(0, 0, 0, 0.5);" readonly>
+						<div class="col-sm-8">
+							<div class="form-inline float-right">
+								<label for="stotal" class="text-white font-weight-bold">Sub-Total: </label>
+								<input type="text" class="form-control text-white" name="stotal" id="stotal" style="background: rgba(0, 0, 0, 0.5);" readonly>
+							</div>
+							<div class="form-inline mt-3 float-right">
+								<label for="discount" class="text-white font-weight-bold">Discount: </label>
+								<input type="text" class="form-control text-white" id="sdiscount" name="sdiscount"  style="background: rgba(0, 0, 0, 0.5);" readonly>
+							</div>
+							<div class="form-inline mt-3 float-right">
+								<label for="stotal" class="text-white font-weight-bold">Total: </label>
+								<input type="text" class="form-control text-white" name="dtotal" id="dtotal"  style="background: rgba(0, 0, 0, 0.5);" readonly>
+							</div>
 						</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-12 text-right">
-						<button class="btn btn-dark text-white">Cancel</button>
-						<button class="btn btn-dark text-white">Print</button>
-						<button class="btn btn-dark text-white" onclick="getSum()">Generate</button>
-						<span id="sumV"></span>
+					<div class="row">
+						<div class="col-lg-12 text-right">
+							<span class="btn btn-dark text-white" onclick="deltable();">Cancel</span>
+							<a href="javascript:void(0)"  class="btn btn-dark text-white" id="saveBtn">Print</a>
+							<span class="btn btn-dark text-white" onclick="getSum()">Generate</span>
+						</div>
 					</div>
-				</div>
+				</form>
 			</div>
 			<!-- right side div -->
 
 			<script type="text/javascript">
 				// caculate total/sum value
-				var table = document.getElementById("table");
-            function getSum()
-            {
-            	sumVal = 0;
-              for(var i = 1; i < table.rows.length; i++){
-                     sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
-              }
-              document.getElementById("stotal").value = sumVal;
-              var coupan=document.getElementById("coupan").value;
-              var discount=50;
-              var total=sumVal;
-              if (coupan=="123") {
-              	if (discount<sumVal) {
-              		total=sumVal-discount;
-              	}
-              	else
-              	{
-              		total=0;
-              	}
-              }
-          else
-          {
-          	total=sumVal;
-          	discount=0;
-
-          }
-          document.getElementById("sdiscount").value = discount;
-              document.getElementById("dtotal").value = total;
-               console.log("Sum => "+sumVal);       
-            }
+				
+				function getSum()
+				{
+					var table = document.getElementById("table");
+					sumVal = 0;
+					for(var i = 1; i < table.rows.length; i++){
+						sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
+					}
+					document.getElementById("stotal").value = sumVal;
+					var coupan=document.getElementById("coupan").value;
+					var discount=100;
+					var total=sumVal;
+					if (coupan=="123") {
+						if (discount<sumVal) {
+							total=sumVal-discount;
+						}
+						else
+						{
+							total=0;
+						}
+					}
+					else
+					{
+						total=sumVal;
+						discount=0;
+					}
+					document.getElementById("sdiscount").value = discount;
+					document.getElementById("dtotal").value = total;
+					console.log("Sum => "+sumVal);       
+				}
 			</script>
 		</div>
 
@@ -283,4 +272,105 @@
 	<span class="text-white"> Copyright@imnadir07@gmail.com</span>
 	
 </div>
+@endsection
+@section('footer')
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+<script src="{{asset('https://code.jquery.com/jquery-3.3.1.js')}}"></script>
+<script src="{{asset('https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')}}"></script>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+crossorigin="anonymous"></script>
+
+<!-- datatable script -->
+<script type="text/javascript">
+	$(function () {
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+
+		// $("#contact-form").on("submit", function(event) {
+		// 	event.preventDefault();
+		// 	$.ajax({
+		// 		type: "POST",
+		// 		url: "php/email-sender.php",
+		// 		data: {
+		// 			name: $("#contact-form #name").val(),
+		// 			email: $("#contact-form #email").val(),
+		// 			subject: $("#contact-form #subject").val(),
+		// 			message: $("#contact-form #message").val()
+		// 		},
+		// 		dataType: "json",
+		// 		success: function(data) {
+		// 			console.log(“success”);
+		// 		} else {
+		// 			console.log(“error”);
+		// 		}
+		// 	},
+		// 	error: function() {
+		// 		console.log(“error”);
+		// 	}
+		// });
+
+
+
+
+		$('#saveBtn').click(function (e) {
+			e.preventDefault();
+			$(this).html('Save');
+
+			$.ajax({
+				data: {
+					stotal: $("#stotal").val(),
+					sdiscount: $("#sdiscount").val(),
+					dtotal: $("#dtotal").val()
+				},
+				url: "{{ route('sales.store') }}",
+				type: "POST",
+				dataType: 'JSON',
+				success: function (data) {
+
+
+					deltable();
+					
+
+
+              // table.draw();
+
+          },
+          error: function (data) {
+          	console.log('Error:', data);
+          	$('#saveBtn').html('Save Changes');
+          }
+      });
+		});
+
+		// $('#saveBtn').click(function (e) {
+		// 	e.preventDefault();
+		// 	$(this).html('Save');
+		// 	var form = $('#saleForm')[0];
+		// 	var formData = new FormData(form);
+		// 	$.ajax({
+		// 		data: formData,
+		// 		url: "{{ route('sales.store') }}",
+		// 		method: "POST",
+		// 		dataType: 'JSON',
+  //         success: function (data) {
+  //         	$('#saleForm').trigger("reset");
+
+  //         	// table.draw();
+  //         },
+  //         error: function (data) {
+  //         	console.log('Error:', data);
+  //         	$('#saveBtn').html('Save Changes');
+  //         }
+  //     });
+		// });
+	});
+</script>
+<!-- datatable script -->
 @endsection

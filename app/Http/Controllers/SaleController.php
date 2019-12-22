@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;  
-use App\Item;
+use App\Sale;
 use Redirect;
 use PDF;
 use DataTables;
@@ -15,9 +15,17 @@ class SaleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        
+        if ($request->ajax()) {
+            $data = Sale::latest()->get();
+            return Datatables::of($data)
+            ->addIndexColumn()
+            ->make(true);
+
+        }
+
+        return view('admin.statistics');
     }
 
     /**
@@ -36,10 +44,15 @@ class SaleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
-        //
+        Sale::updateOrCreate(['order_no' => $request->order_no],
+                ['amount' => $request->stotal, 'discount' => $request->sdiscount, 'total_amount' => $request->dtotal ]);
+
+        return response()->json(['success'=>'Sale Record saved successfully.']);
     }
+
 
     /**
      * Display the specified resource.

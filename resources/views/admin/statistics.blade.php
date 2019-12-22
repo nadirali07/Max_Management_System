@@ -6,6 +6,8 @@
 <link href="{{ asset('man/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="{{ asset('https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css') }}" >
 
+
+
 @endsection
 
 @section('title', 'Statistics | ')
@@ -106,18 +108,18 @@
 						Max Restaurant Recent Sales
 					</div>
 					<div class="card-body" style="background: rgba(0, 0, 0, 0.4);">
-						<table id="example" class="table table-bordered text-white" style="width:100%">
+						<table class="table table-bordered text-white data-table" style="width:100%">
 							<thead>
 								<tr>
 									<th>#</th>
-									<th>NAME</th>
-									<th>STATUS</th>
-									<th>DATE</th>
-									<th>PRICE</th>
+									<th>Order No</th>
+									<th>Amount</th>
+									<th>Discount</th>
+									<th>Total_Price</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
+								<!-- <tr>
 									<td>1</td>
 									<td class="txt-oflo">Elite admin</td>
 									<td>SALE</td>
@@ -165,15 +167,15 @@
 									<td>MEMBER</td>
 									<td class="txt-oflo">April 22, 2017</td>
 									<td><span class="text-success">$64</span></td>
-								</tr>
+								</tr> -->
 							</tbody>
 							<tfoot>
 								<tr>
 									<th>#</th>
-									<th>NAME</th>
-									<th>STATUS</th>
-									<th>DATE</th>
-									<th>PRICE</th>
+									<th>Order No</th>
+									<th>Amount</th>
+									<th>Discount</th>
+									<th>Total_Price</th>
 								</tr>
 							</tfoot>
 						</table>
@@ -248,13 +250,48 @@
 @endsection
 
 @section('footer')
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$(document).ready(function() {
 		$('#example').DataTable();
 	} );
-</script>
+</script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="{{asset('https://code.jquery.com/jquery-3.3.1.js')}}"></script>
 <script src="{{asset('https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')}}"></script>
+
+
+<!-- datatable script -->
+<script type="text/javascript">
+	$(function () {
+		$.ajaxSetup({
+			headers: {
+				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+			}
+		});
+		var table = $('.data-table').DataTable({
+			processing: true,
+			serverSide: true,
+			ajax: "{{ route('sales.index') }}",
+			columns: [
+			{data: 'DT_RowIndex', name: 'DT_RowIndex'},
+			{data: 'order_no', name: 'order_no'},
+			{data: 'amount', name: 'amount'},
+			{data: 'discount', name: 'discount'},
+			{data: 'total_amount', name: 'total_amount'},
+			]
+		});
+		
+    
+   
+
+   
+
+});
+</script>
+<!-- datatable script -->
+
 
 @endsection

@@ -19,7 +19,11 @@ body::-webkit-scrollbar-thumb {
   border-radius: 2px;
   border: 1px solid var(--scrollbarBG);
 }
-
+.itemhover:hover{
+    background-color: #53B4DF;
+    color: white;
+    cursor: pointer;
+  }
 .bg{
 	background-color: #1D7CA7;
 	
