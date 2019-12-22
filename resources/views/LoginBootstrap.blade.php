@@ -186,7 +186,7 @@ fieldset{
               <fieldset class="clearfix">
 
                 <p ><span class="fa fa-user"></span>
-                  <input type="text" name="email" Placeholder="Username" required>
+                  <input type="text" name="uname" Placeholder="Username" required>
                 </p> <!-- JS because of IE support; better: placeholder="Username" -->
                 <p><span class="fa fa-lock"></span>
                   <input type="password" name="pass"  Placeholder="Password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
@@ -198,6 +198,7 @@ fieldset{
                     <button type="submit"  class="btn btn-dark text-white">Sign In</button>
                   </span>
                 </div>
+                <span class="text-center mt-4" style="width:70%; text-align:left;  display: inline-block;"><a class="small-text text-danger" href="/"><i class="far fa-hand-point-left"></i> Back to Max Restaurant</a></span>
 
               </fieldset>
               <div class="clearfix"></div>

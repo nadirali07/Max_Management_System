@@ -15,6 +15,7 @@ class CreateLoginModalsTable extends Migration
     {
         Schema::create('login_modals', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('uname');
             $table->string('email');
             $table->string('pass');
             $table->timestamps();

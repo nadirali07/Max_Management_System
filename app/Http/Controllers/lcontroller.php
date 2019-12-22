@@ -15,13 +15,8 @@ class lcontroller extends Controller
      */
     public function index()
     {
-        // if(session()->get('user')=="")
-        // { echo "tgissssiss";
-        //     return view('LoginBootstrap');
-        // } else{
-            // echo "tgissssiss1212132312312312";
-         return view('index');
-        // }
+         return redirect('/admin');
+        
     }
 
     /**
@@ -47,12 +42,12 @@ class lcontroller extends Controller
 
       // $test = LoginModal::where('pass','=',$request->pass)->get();
 
-        $test = LoginModal::where('pass' ,$request->pass)->where('email', $request->email)->get();
+        $test = LoginModal::where('pass' ,$request->pass)->where('uname', $request->uname)->get();
         foreach($test as $value){
-         $request->session()->put('user',$request->pass);
+         $request->session()->put('user',$request->uname);
          
       // echo "$value->email";
-         return view('index');
+         return redirect('/admin');
      }
     }
 

@@ -127,13 +127,6 @@
   </div>
 </div>
 </li>
-
-
-
-<a class="btn btn-dark"  href="/Logout">Logout</a>
-
-
-
 <li class="nav-item">
  <div class="dropdown">
   <a class="btn nav-link btn-outline-warning"href="#BLOG" style="color: white; border-style:none;;font-size: 15px" >
