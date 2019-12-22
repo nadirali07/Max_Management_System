@@ -40,3 +40,65 @@ Route::get('/members', function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('/', function () {
+     if(session()->get('user') =="")
+     {
+    return view('LoginBootstrap');
+} else{
+return view('index');
+}}
+);
+
+Route::get('/Max', function () {
+    return view('Max');
+});
+Route::get('/Admin', function () {
+	if(session()->get('user') =="")
+   {
+    return view('LoginBootstrap');
+  } else{
+    return view('index');
+  }
+    return view('LoginBootstrap');
+});
+Route::get('/Logout', function () {
+
+session()->put('user',"");
+    return view('LoginBootstrap');
+});
+Route::get('/tabs', function () {
+    return view('tabs');
+});
+
+
+Route::get('/LoginBootstrap','LoginController@Login');
+Route::post('/subm','LoginController@store');
+Route::resource('submit','LoginController@find');
+Route::post('/submitC','ComplainController@store');
+
+Route::post('/tableSubmit','CReservation@store');
+Route::resource('sub','lcontroller');
+
+
+
+Route::get('/nav', function () {
+    return view('navbar	');
+});
