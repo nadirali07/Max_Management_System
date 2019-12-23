@@ -55,47 +55,7 @@
 									</div>
 								</div>
 							</div>
-							@endforeach
-							<!-- <div class="col-sm-3">
-								<div class="card mt-4">
-									<img class="card-img-top pimg mx-auto my-3" src="images/fanta.png" alt="Card image cap">
-									<div class="card-body p-1 text-center"style="background-color: #1D7CA7;">
-										<span class="font-weight-bold text-white">Fanta Tin</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="card mt-4">
-									<img class="card-img-top pimg mx-auto my-3" src="images/7up.png" alt="Card image cap">
-									<div class="card-body p-1 text-center" style="background-color: #1D7CA7;"> 
-										<span class="font-weight-bold text-white">7Up Tin</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="card mt-4">
-									<img class="card-img-top pimg mx-auto my-3" src="images/buffalo-burger.png" alt="Card image cap">
-									<div class="card-body p-1 text-center" style="background-color: #1D7CA7;">
-										<span class="font-weight-bold text-white">buffalo-burger</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="card mt-4">
-									<img class="card-img-top pimg mx-auto my-3" src="images/hamburger.png" alt="Card image cap">
-									<div class="card-body p-1 text-center" style="background-color: #1D7CA7;">
-										<span class="font-weight-bold text-white">hamburger</span>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="card mt-4">
-									<img class="card-img-top pimg mx-auto my-3" src="images/cocktail.png" alt="Card image cap">
-									<div class="card-body p-1 text-center" style="background-color: #1D7CA7;">
-										<span class="font-weight-bold text-white">cocktail juice</span>
-									</div>
-								</div>
-							</div> -->		
+							@endforeach		
 						</div>
 					</div>
 				</div>
@@ -239,7 +199,7 @@
 					var table = document.getElementById("table");
 					sumVal = 0;
 					for(var i = 1; i < table.rows.length; i++){
-						sumVal = sumVal + parseInt(table.rows[i].cells[2].innerHTML);
+						sumVal = sumVal + parseInt(table.rows[i].cells[3].innerHTML);
 					}
 					document.getElementById("stotal").value = sumVal;
 					var coupan=document.getElementById("coupan").value;
@@ -293,33 +253,6 @@ crossorigin="anonymous"></script>
 				'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
 			}
 		});
-
-		// $("#contact-form").on("submit", function(event) {
-		// 	event.preventDefault();
-		// 	$.ajax({
-		// 		type: "POST",
-		// 		url: "php/email-sender.php",
-		// 		data: {
-		// 			name: $("#contact-form #name").val(),
-		// 			email: $("#contact-form #email").val(),
-		// 			subject: $("#contact-form #subject").val(),
-		// 			message: $("#contact-form #message").val()
-		// 		},
-		// 		dataType: "json",
-		// 		success: function(data) {
-		// 			console.log(“success”);
-		// 		} else {
-		// 			console.log(“error”);
-		// 		}
-		// 	},
-		// 	error: function() {
-		// 		console.log(“error”);
-		// 	}
-		// });
-
-
-
-
 		$('#saveBtn').click(function (e) {
 			e.preventDefault();
 			$(this).html('Save');
@@ -349,28 +282,6 @@ crossorigin="anonymous"></script>
           }
       });
 		});
-
-		// $('#saveBtn').click(function (e) {
-		// 	e.preventDefault();
-		// 	$(this).html('Save');
-		// 	var form = $('#saleForm')[0];
-		// 	var formData = new FormData(form);
-		// 	$.ajax({
-		// 		data: formData,
-		// 		url: "{{ route('sales.store') }}",
-		// 		method: "POST",
-		// 		dataType: 'JSON',
-  //         success: function (data) {
-  //         	$('#saleForm').trigger("reset");
-
-  //         	// table.draw();
-  //         },
-  //         error: function (data) {
-  //         	console.log('Error:', data);
-  //         	$('#saveBtn').html('Save Changes');
-  //         }
-  //     });
-		// });
 	});
 </script>
 <!-- datatable script -->

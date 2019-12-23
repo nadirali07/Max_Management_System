@@ -201,33 +201,19 @@
 					</div>
 					<div class="card-body scroller" style="background: rgba(0, 0, 0, 0.4);height: 250px;">
 						<div class="px-5">
+							@foreach($com As $c)
 							<div class="comment-body">
-								<div class="user-img"> <i class="fas fa-user fa-2x"></i><span class="h4"> Pavan kumar</span>
+								<div class="user-img"> <i class="fas fa-user fa-2x"></i><span class="h4"> Anonymous</span>
 								</div>
 								<div class="mail-contnet">
-									<span class="time">10:20 AM   20  may 2016</span>
-									<br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> 
+									<span class="time">{{ $c->created_at }}</span>
+									<br/><span class="mail-desc">{{ $c->complains }}</span> 
 								</div>
 							</div>
 							<br>
-							<div class="comment-body">
-								<div class="user-img"> <i class="fas fa-user fa-2x"></i><span class="h4"> Pavan kumar</span>
-								</div>
-								<div class="mail-contnet">
-									<span class="time">10:20 AM   20  may 2016</span>
-									<br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> 
-								</div>
-							</div>
-							<br>
-							<div class="comment-body">
-								<div class="user-img"> <i class="fas fa-user fa-2x"></i><span class="h4"> Pavan kumar</span>
-								</div>
-								<div class="mail-contnet">
-									<span class="time">10:20 AM   20  may 2016</span>
-									<br/><span class="mail-desc">Donec ac condimentum massa. Etiam pellentesque pretium lacus. Phasellus ultricies dictum suscipit. Aenean commodo dui pellentesque molestie feugiat. Aenean commodo dui pellentesque molestie feugiat</span> 
-								</div>
-							</div>
-							<br>
+							@endforeach
+							
+							
 						</div>
 					</div>
 					<div class="card-footer small text-white" style=" background: #1C9CD6;">

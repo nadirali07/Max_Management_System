@@ -24,54 +24,26 @@
 				<div class="card bg-transparent text-white" >
 					<div class="card-header font-weight-bold" style="font-size: 20px; background: #1C9CD6;">
 						<i class="fas fa-table"></i>
-						Max Restaurant Members
+						Max Seats Reservations
 					</div>
 					<div class="card-body" style="background: rgba(0, 0, 0, 0.5);">
 						<table id="example" class="table table-bordered text-white" style="width:100%">
 							<thead>
 								<tr>
-									<th>Member Name</th>
-									<th>Membership No.</th>
-									<th>Membership date</th>
-									<th>Expiring Date</th>
-
+									<th>Booking id</th>
+									<th>Booking Seats</th>
+									<th>Booking date</th>
 								</tr>
 							</thead>
 							<tbody>
+								@foreach($Reservation As $r)
 								<tr>
-									<td>Tiger Nixon</td>
-									<td>AXVF123</td>
-									<td>12-12-12</td>
-									<td>12-12-12</td>
+									<td>{{ $r->id }}</td>
+									<td>{{$r->peoples }}</td>
+									<td>{{ $r->DT }}</td>
 								</tr>
-								<tr>
-									<td>Tiger Nixon</td>
-									<td>AXVF123</td>
-									<td>12-12-12</td>
-									<td>12-12-12</td>
-								</tr>
-								<tr>
-									<td>Tiger Nixon</td>
-									<td>AXVF123</td>
-									<td>12-12-12</td>
-									<td>12-12-12</td>
-								</tr>
-								<tr>
-									<td>Tiger Nixon</td>
-									<td>AXVF123</td>
-									<td>12-12-12</td>
-									<td>12-12-12</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<th>Member Name</th>
-									<th>Membership No.</th>
-									<th>Membership date</th>
-									<th>Expiring Date</th>
-
-								</tr>
-							</tfoot>
+								@endforeach
+								
 						</table>
 
 					</div>

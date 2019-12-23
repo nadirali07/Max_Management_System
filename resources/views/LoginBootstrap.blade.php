@@ -198,7 +198,7 @@ fieldset{
                     <button type="submit"  class="btn btn-dark text-white">Sign In</button>
                   </span>
                 </div>
-                <span class="text-center mt-4" style="width:70%; text-align:left;  display: inline-block;"><a class="small-text text-danger" href="/"><i class="far fa-hand-point-left"></i> Back to Max Restaurant</a></span>
+                <span class="text-center mt-4" style="width:70%; text-align:left;  display: inline-block;"><a class="small-text text-warning" href="/"><i class="far fa-hand-point-left"></i> Back to Max Restaurant</a></span>
 
               </fieldset>
               <div class="clearfix"></div>

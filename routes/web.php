@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/free', function () {
+  return view('free');
+});
 Route::get('/', function () {
   return view('index');
 });
@@ -31,14 +34,17 @@ else
 
 
 Route::get('/statistics', function () {
-  return view('admin.statistics');
+  $com= \App\Complain::all();
+  return view('admin.statistics',compact('com'));
 });
 Route::resource('items', 'ItemController');
 Route::resource('sales', 'SaleController');
 Route::resource('management', 'MController');
-Route::get('/members', function () {
-  return view('admin.members');
-});
+Route::resource('reserve', 'ReserveController');
+
+// Route::get('/reserve', function () {
+//   return view('admin.reserve');
+// });
 
 // Route::resource('products', 'ItemController'); 
 Route::resource('sub','lcontroller');

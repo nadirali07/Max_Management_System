@@ -2,23 +2,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" href="{{asset('/css/style.css') }}"/>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-	<script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <meta charset="utf-8">
+  <title>TheEvent - Bootstrap Event Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
 
 
-	<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
-</head>
-<body data-spy="scroll" data-target=".navbar" data-offset="250">
+  <!-- Bootstrap CSS File -->
+  <link href="{{ asset('gal/lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
-	<div class="container-fluid">
-		<div class="row">
+  <!-- Libraries CSS Files -->
+  <link href="{{ asset('gal/lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('gal/lib/animate/animate.min.css')}}" rel="stylesheet">
+  <link href="{{ asset('gal/lib/venobox/venobox.css')}}" rel="stylesheet">
+  <link href="{{ asset('gal/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link rel="stylesheet" type="text/css" href="{{ asset('gal/css/style.css')}}">
+  <!--  <link href="{{ asset('gal/css/style.css')}}" rel="stylesheet"> -->
+
+  <!-- =======================================================
+    Theme Name: TheEvent
+    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+    ======================================================= -->
+    <title></title>
+    <link rel="stylesheet" href="{{asset('/css/style.css') }}"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <script  src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+
+
+    <script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+
+  </head>
+  <body data-spy="scroll" data-target=".navbar">
+
+   <div class="container-fluid">
+    <div class="row">
       <img src="Main_page_pic.jpg" alt="Lights" style="width:100%; height: 90%">
     </div>
   </div>
@@ -29,7 +59,7 @@
     <div class="col-sm-12">
 
      <img src="logo.png" alt="Lights" >	
-     <div  style="text-align: center;margin-top: -350px">
+     <div  style="text-align: center;margin-top: -370px">
        <span style=" font-size: 38px;color: #ffb606; 
        font-family: Forte; "> Welcome</span> 
        <br>
@@ -83,959 +113,16 @@
      <ul class="navbar-nav ml-auto" >
       <li class="nav-item active" >
        <a class=" btn nav-link btn-outline-warning" href="#">Home </a>
-     </li><li class="nav-item">
-      <div class="dropdown ">
-       <a class="btn nav-link text btn-outline-warning" href="#RESERVATION"  
-       style="color: white;border-style:none;; font-size: 15px;"><span style="margin-left:15px;"> RESERVATION</span></a>
-       <div class="dropdown-content">
-         <a href="#RESERVATION">Resrvation Form</a>
-         <a href="#RESERVATION">Open Table Form</a>
-       </div>
-     </div>
-   </li>
-
-   <li class="nav-item">
-    <a class="btn nav-link text btn-outline-warning" href="#MENUScroll"  
-    style="color: white;border-style:none;; font-size: 15px;"><span style="margin-left:15px;">MENU</span></a>  
-
-  </li>
-
-  <li class="nav-item">
-    <div class="dropdown ">
-     <a class="btn nav-link text btn-outline-warning" href="#EVENT"  
-     style="color: white;border-style:none;; font-size: 15px;"><span  style="margin-left:15px;"> EVENT</span></a>
-     <div class="dropdown-content">
-      <a href="#EVENT">Happening Event</a>
-      <a href="#EVENT">Upcomming Event</a>
-      <a href="#EVENT">Expired Event</a>
-    </div>
-  </div>
-</li>
-
-
-<li class="nav-item">
-  <div class="dropdown ">
-   <a class="btn nav-link text btn-outline-warning" href="#FEATURES"
-   style="color: white;border-style:none; ;font-size: 15px;">
-   <span  style="margin-left:15px;"> FEATURES</span></a>
-   <div class="dropdown-content">
-    <a href="#FEATURES">About us</a>
-    <a href="#FEATURES">Gallery</a>
-    <a href="#FEATURES">Social Links</a>
-    <a href="#FEATURES">Admin News</a>
-
-  </div>
-</div>
-</li>
-<li class="nav-item">
- <div class="dropdown">
-  <a class="btn nav-link btn-outline-warning"href="#BLOG" style="color: white; border-style:none;;font-size: 15px" >
-   BLOG
- </a>
-</div>
-</li>
-<li class="nav-link">
- <div class="hrh">
-
- </div>
-</li>
-<li class="nav-link">
- <a href="#"   style="color: white" >
-  <span class="iconify" ho data-icon="simple-line-icons:social-facebook"
-  data-inline="false" data-width="20px" data-height="20px"></span>
-</a></li>
-
-
-<li class="nav-link">
-  <a href="#"   style="color: white">
-   <span class="iconify" data-icon="simple-line-icons:social-twitter"
-   data-inline="false"   data-width="20px" data-height="20px"></span>
- </a></li>
-
- <li class="nav-link">
-   <a href="#"   style="color: white">
-    <span class="iconify" data-icon="entypo-social:tripadvisor"
-    data-inline="false"  data-width="20px" data-height="20px"></span>
-  </a></li>      
-</ul>
-</div>
-</nav>
-</div>
-
-<!-- na vBar Endddd-->
-
-
-
-<!-- table reservation -->
-<div class="container-fluid">
-  <div class="row">
-
-   <div class="col-sm-12" >
-
-    <p class="text-center"  id="RESERVATION" style="font-size: 38px;color: #ffb606; 
-    font-family: Forte; margin-top: 110px;">Book`S </p>
-    <h2 class="text-center">TABLE</h2>
-
-    <br>
-    <br>
-    <p class="text-center" style="color: gray">Opening Hour <b>8:00</b> AM - <b>10:00</b> PM, every day on week.</p>
-  </div>
-</div>
-</div>
-
-
-     <form action="{{url('/tableSubmit')}}" method="post">
-  @csrf
-<div class="container">
-  <div class="row justify-content-center py-4">
-    <div class="col-md-3"> 
-      <div class="form-group">
-        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
-          <input type="text" name="DT" class="form-control datetimepicker-input" data-target="#datetimepicker1" placeholder="Date" />
-          <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
-            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-          </div>
-        </div>
-      </div>
+     </li>
+     <li class="nav-item">
+      <a id="btnn" class=" border-0 nav-link text-white" href="#demo" onclick="hidefun();" style="text-decoration: none;color: white; border-style:none;;font-size: 15px"> Catagories</a> 
       <script type="text/javascript">
-        $(function () {
-          $('#datetimepicker1').datetimepicker();
+        $("#btnn").click(function(){
+          $("#demo").toggle("slow");
         });
       </script>
-
-    </div>
-    <div class="col-md-3"> 
-      <select class="form-control colorful-select dropdown-primary" name="peoples">
-        <option disabled selected>Choose your option</option>
-        <option value="1">1 People</option>
-        <option value="2">2 People</option>
-        <option value="3">3 People</option>
-        <option value="4">4 People</option>
-        <option value="5">5 People</option>
-        <option value="6">6 People</option>
-        <option value="7">7 People</option>
-        <option value="8">8 People</option>
-        <option value="9">9 People</option>
-        <option value="10">10 People</option>
-
-      </select>
-
-    </div>
-    <div class="col-md-3"> 
-      <button  type="submit" name="tableSubmit" class="button1" style="
-      background: #ffb606;
-      border-color: #ffb606;
-      transition: all .2s ease-in-out 0s;
-      font-weight: 700;
-      width: 250px;
-      height: 40px;
-      border-radius: 5px;
-      /*margin-left: 45px;*/ 
-      color: #2a2a2a;">BOOK A TABLE</button>
-      <p style="float: right; color: gray ;margin-right: 120px;font-size: 12px;">Reserve Now</p>
-
-    </div>
-
-  </div>
-</div>
-</form>
-
-
-
-
-<div class="container-fluid" id="MENUScroll">
-  <div class="row">
-
-    <img src="MenuUpper.jpg" alt="Lights" style="width:100%; height: 50%; background-attachment: fixed;">
-  </div>
-</div>
-<div class="container">
-	
-	<div class="row">
-
-    <div class="col-sm-2">
-
-    </div>
-    <div class="col-sm-8" style="margin-top: -60px"  >
-
-
-      <div class="nav nav-tabs nav-fill"  role="tablist" style=" background-color: black;opacity: 0.5">
-        <a class="nav-item nav-link "  data-toggle="tab" href="#JUNKSFOOD" role="tab" >
-          <img src="junksfood.png"> <span style="color: yellow">JUNKSFOOD</span>
-        </a>
-        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#DRINKS" role="tab">
-          <img src="drinks.png"> <span style="color: yellow">DRINKS</span>
-
-        </a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#CHEF" role="tab">
-          <img src="chef.png"> <span style="color: yellow">CHEF</span>
-
-        </a>
-        <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#COCKTAIL" role="tab">
-          <img src="coctail.png"> 
-          <span style="color: yellow">COCKTAIL</span>
-        </a>
-      </div>
-
-
-      <div class="tab-content">
-        <div class="tab-pane fade show active" id="JUNKSFOOD" role="tabpanel" ><br>
-
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-                  <div class="card-content">
-                    <div class="card-img">
-                      <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                      <span><h4>Dinks</h4></span>
-                    </div>
-                    <div class="card-desc" >
-                      <h3>QUAIL</h3>
-                      <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                      <a href="#" class="btn btn-warning">Price:9.9$</a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-                  <div class="card-content">
-                    <div class="card-img">
-                      <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                      <span><h4>Dinks</h4></span>
-                    </div>
-                    <div class="card-desc" >
-                      <h3>QUAIL</h3>
-                      <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                      <a href="#" class="btn btn-warning">Price:9.9$</a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-                  <div class="card-content">
-                    <div class="card-img">
-                      <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                      <span><h4>Dinks</h4></span>
-                    </div>
-                    <div class="card-desc" >
-                      <h3>QUAIL</h3>
-                      <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                      <a href="#" class="btn btn-warning">Price:9.9$</a>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-               <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-                <div class="card-content">
-                  <div class="card-img">
-                    <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                    <span><h4>Dinks</h4></span>
-                  </div>
-                  <div class="card-desc" >
-                    <h3>QUAIL</h3>
-                    <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                    <a href="#" class="btn btn-warning">Price:9.9$</a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-      <div class="tab-pane fade" id="DRINKS" role="tabpanel" ><br>
-
-
-
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-                <div class="card-content">
-                  <div class="card-img">
-                    <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                    <span><h4>Dinks</h4></span>
-                  </div>
-                  <div class="card-desc" >
-                    <h3>QUAIL</h3>
-                    <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                    <a href="#" class="btn btn-warning">Price:9.9$</a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-                <div class="card-content">
-                  <div class="card-img">
-                    <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                    <span><h4>Dinks</h4></span>
-                  </div>
-                  <div class="card-desc" >
-                    <h3>QUAIL</h3>
-                    <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                    <a href="#" class="btn btn-warning">Price:9.9$</a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-                <div class="card-content">
-                  <div class="card-img">
-                    <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                    <span><h4>Dinks</h4></span>
-                  </div>
-                  <div class="card-desc" >
-                    <h3>QUAIL</h3>
-                    <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                    <a href="#" class="btn btn-warning">Price:9.9$</a>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-             <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-              <div class="card-content">
-                <div class="card-img">
-                  <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                  <span><h4>Dinks</h4></span>
-                </div>
-                <div class="card-desc" >
-                  <h3>QUAIL</h3>
-                  <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                  <a href="#" class="btn btn-warning">Price:9.9$</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="tab-pane fade" id="CHEF" role="tabpanel" ><br>
-
-
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-              <div class="card-content">
-                <div class="card-img">
-                  <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                  <span><h4>Dinks</h4></span>
-                </div>
-                <div class="card-desc" >
-                  <h3>QUAIL</h3>
-                  <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                  <a href="#" class="btn btn-warning">Price:9.9$</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-              <div class="card-content">
-                <div class="card-img">
-                  <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                  <span><h4>Dinks</h4></span>
-                </div>
-                <div class="card-desc" >
-                  <h3>QUAIL</h3>
-                  <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                  <a href="#" class="btn btn-warning">Price:9.9$</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-              <div class="card-content">
-                <div class="card-img">
-                  <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                  <span><h4>Dinks</h4></span>
-                </div>
-                <div class="card-desc" >
-                  <h3>QUAIL</h3>
-                  <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                  <a href="#" class="btn btn-warning">Price:9.9$</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-           <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-            <div class="card-content">
-              <div class="card-img">
-                <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                <span><h4>Dinks</h4></span>
-              </div>
-              <div class="card-desc" >
-                <h3>QUAIL</h3>
-                <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                <a href="#" class="btn btn-warning">Price:9.9$</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <div class="tab-pane fade" id="COCKTAIL" role="tabpanel"><br>
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-            <div class="card-content">
-              <div class="card-img">
-                <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                <span><h4>Dinks</h4></span>
-              </div>
-              <div class="card-desc" >
-                <h3>QUAIL</h3>
-                <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                <a href="#" class="btn btn-warning">Price:9.9$</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-            <div class="card-content">
-              <div class="card-img">
-                <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                <span><h4>Dinks</h4></span>
-              </div>
-              <div class="card-desc" >
-                <h3>QUAIL</h3>
-                <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                <a href="#" class="btn btn-warning">Price:9.9$</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-            <div class="card-content">
-              <div class="card-img">
-                <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-                <span><h4>Dinks</h4></span>
-              </div>
-              <div class="card-desc" >
-                <h3>QUAIL</h3>
-                <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-                <a href="#" class="btn btn-warning">Price:9.9$</a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-         <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-          <div class="card-content">
-            <div class="card-img">
-              <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-              <span><h4>Dinks</h4></span>
-            </div>
-            <div class="card-desc" >
-              <h3>QUAIL</h3>
-              <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-              <a href="#" class="btn btn-warning">Price:9.9$</a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-
-
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-
-<div class="container-fluid" >
- <div class="row">
-  <div style="background-image: url('Dinner.jpg');   background-size: cover; height: 300px; width: 100%; background-size: cover;margin-top: 200px; background-attachment: fixed;">
-    <br><br><br><br><br><br>
-    <h2><span style="color: white"><center><b> DINNER</b></center></span></h2>
-  </div></div>
-</div>
-
-<div class="container">
-  <div class="row pt-4">
-    <div class="col-md-3">
-      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-        <div class="card-content">
-          <div class="card-img">
-            <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-            <span><h4>Dinks</h4></span>
-          </div>
-          <div class="card-desc" >
-            <h3>QUAIL</h3>
-            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-            <a href="#" class="btn btn-warning">Price:9.9$</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-        <div class="card-content">
-          <div class="card-img">
-            <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-            <span><h4>Dinks</h4></span>
-          </div>
-          <div class="card-desc" >
-            <h3>QUAIL</h3>
-            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-            <a href="#" class="btn btn-warning">Price:9.9$</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-        <div class="card-content">
-          <div class="card-img">
-            <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-            <span><h4>Dinks</h4></span>
-          </div>
-          <div class="card-desc" >
-            <h3>QUAIL</h3>
-            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-            <a href="#" class="btn btn-warning">Price:9.9$</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-     <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-      <div class="card-content">
-        <div class="card-img">
-          <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-          <span><h4>Dinks</h4></span>
-        </div>
-        <div class="card-desc" >
-          <h3>QUAIL</h3>
-          <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-          <a href="#" class="btn btn-warning">Price:9.9$</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</div>
-
-</div>
-
-<div class="container-fluid">
-  <div class="row">
-
-    <div style="background-image: url('lunch.jpg');   background-size: cover; height: 300px;width: 100%; background-size: cover;margin-top: 200px; background-attachment: fixed;">
-      <br><br><br><br><br><br>>
-
-      <h2><span style="color: white"><center><b>LUNCH</b></center></span></h2>
-
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row pt-4">
-    <div class="col-md-3">
-      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-        <div class="card-content">
-          <div class="card-img">
-            <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-            <span><h4>Dinks</h4></span>
-          </div>
-          <div class="card-desc" >
-            <h3>QUAIL</h3>
-            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-            <a href="#" class="btn btn-warning">Price:9.9$</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-        <div class="card-content">
-          <div class="card-img">
-            <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-            <span><h4>Dinks</h4></span>
-          </div>
-          <div class="card-desc" >
-            <h3>QUAIL</h3>
-            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-            <a href="#" class="btn btn-warning">Price:9.9$</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-        <div class="card-content">
-          <div class="card-img">
-            <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-            <span><h4>Dinks</h4></span>
-          </div>
-          <div class="card-desc" >
-            <h3>QUAIL</h3>
-            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-            <a href="#" class="btn btn-warning">Price:9.9$</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-     <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-      <div class="card-content">
-        <div class="card-img">
-          <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-          <span><h4>Dinks</h4></span>
-        </div>
-        <div class="card-desc" >
-          <h3>QUAIL</h3>
-          <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-          <a href="#" class="btn btn-warning">Price:9.9$</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</div>
-
-</div>
-<!-- lunch section close -->
-
-<div class="container-fluid">
- <div class="row">
-  <div style="background-image: url('breakfast.jpg');   background-size: cover; height: 300px;width: 100%;background-position: 50% 195px;
-  margin-top: 100px;
-  background-attachment: fixed;">
-  <br><br><br><br><br><br>
-
-  <h2><span style="color: white"><center><b>BREAKFAST</b></center></span></h2>
-
-
-</div>
-</div>
-</div>
-
-
-<div class="container">
-  <div class="row pt-4">
-    <div class="col-md-3">
-      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-        <div class="card-content">
-          <div class="card-img">
-            <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-            <span><h4>Dinks</h4></span>
-          </div>
-          <div class="card-desc" >
-            <h3>QUAIL</h3>
-            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-            <a href="#" class="btn btn-warning">Price:9.9$</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-        <div class="card-content">
-          <div class="card-img">
-            <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-            <span><h4>Dinks</h4></span>
-          </div>
-          <div class="card-desc" >
-            <h3>QUAIL</h3>
-            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-            <a href="#" class="btn btn-warning">Price:9.9$</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-        <div class="card-content">
-          <div class="card-img">
-            <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-            <span><h4>Dinks</h4></span>
-          </div>
-          <div class="card-desc" >
-            <h3>QUAIL</h3>
-            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-            <a href="#" class="btn btn-warning">Price:9.9$</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-     <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
-      <div class="card-content">
-        <div class="card-img">
-          <img src="https://placeimg.com/380/230/animals" width="50px" alt="">
-          <span><h4>Dinks</h4></span>
-        </div>
-        <div class="card-desc" >
-          <h3>QUAIL</h3>
-          <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
-          <a href="#" class="btn btn-warning">Price:9.9$</a>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-</div>
-
-</div>
-
-<div class="container-fluid">
-  <div class="row">
-    <div alt=""  id="EVENT" 
-    style=" background-image: url('eventpic.jpg');  background-size: cover; height: 300px;width: 100%;margin-top: 100px">
-  </div>
-</div>
-</div>
-
-
-<div class="container">
-  <div class="row">
-   <!-- about Event Sections Tabs -->
-
-   <div class="col-sm-6">
-
-
-    <ul class="nav nav-pills" style="margin-top: 100px;">
-      <li class="nav-item">
-        <a class="nav-link active" data-toggle="pill" href="#Happenning" style="width: 200px;opacity: 0.7">Happenning</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="pill" href="#Upcomming"  style="width: 200px;opacity: 0.7">Upcomming</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="pill" href="#Expired"  style="width: 200px;opacity: 0.7">
-        Expired</a>
-      </li>
-    </ul>
-
-    <!-- Tab panes -->
-    <div class="tab-content" style="margin-top: 70px">
-
-      <div class="tab-pane container active" id="Happenning"><span style="color: gray"><h4 class="text">Wine Testig</h4><br>
-        <img src="chef.png" style="width: 110px;height: 120px">
-        <br>
-
-        <div  style="border-radius: 5px;border: 1px solid gray;width:240px;margin-top:30px;margin-left: 0px; border: 1px solid #ddd;">
-          <span style="text-transform: uppercase;color: color: #333;"><b>QUAIL</b></span>
-
-          <p style="color: #666666;margin-top: 20px">
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos
-         </p>
-
-         <p style="color: #666666;">
-           <span style="color: yellow;margin-left: 50px; font-size: 19px;opacity: 0.6"><b>31 </b></span> : &nbsp&nbsp&nbsp02:00 - 20:30
-           <br> 
-           <span style="color: yellow;margin-left: 50px; font-size: 14px;opacity: 0.6"><b>  AUG</b></span>
-           &nbsp&nbsp&nbspPARIS
-         </p>
-       </div>
-
-
-     </div>
-
-     <div class="tab-pane container fade" id="Upcomming"><br>
-       <span style="color: gray"><h4 class="text">Wine Testig</h4><br>
-        <img src="gg.jpg" style="width: 210px;height: 170px">
-        <div  style="border-radius: 5px;border: 1px solid gray;width:240px;margin-top:30px;margin-left: 0px; border: 1px solid #ddd;">
-          <span style="text-transform: uppercase;color: color: #333;"><b>QUAIL</b></span>
-
-          <p style="color: #666666;margin-top: 20px">
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos
-         </p>
-
-         <p style="color: #666666;">
-           <span style="color: yellow;margin-left: 50px; font-size: 19px;opacity: 0.6"><b>31 </b></span> : &nbsp&nbsp&nbsp02:00 - 20:30
-           <br> 
-           <span style="color: yellow;margin-left: 50px; font-size: 14px;opacity: 0.6"><b>  AUG</b></span>
-           &nbsp&nbsp&nbspPARIS
-         </p>
-       </div>
-
-
-     </div>
-
-
-     <div class="tab-pane container fade" id="Expired"><br>
-       <span style="color: gray"><h4 class="text">Wine Testig</h4><br>
-        <img src="ice.jpg" style="width: 210px;height: 170px">
-        <div  style="border-radius: 5px;border: 1px solid gray;width:240px;margin-top:30px;margin-left: 0px; border: 1px solid #ddd;">
-          <span style="text-transform: uppercase;color: color: #333;"><b>QUAIL</b></span>
-
-          <p style="color: #666666;margin-top: 20px">
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste commodi reiciendis fugit qui quia ut, non omnis dignissimos
-         </p>
-
-         <p style="color: #666666;">
-           <span style="color: yellow;margin-left: 50px; font-size: 19px;opacity: 0.6"><b>31 </b></span> : &nbsp&nbsp&nbsp02:00 - 20:30
-           <br> 
-           <span style="color: yellow;margin-left: 50px; font-size: 14px;opacity: 0.6"><b>  AUG</b></span>
-           &nbsp&nbsp&nbspPARIS
-         </p>
-       </div>
-     </div>
-   </div>   <!-- tabs portio closeee baby -->
-
- </div>
- <!-- about Event Sections Tabs closeeeeeee -->
- <!-- about bloggg-->
-
- <div  class="col-sm-6" style="margin-top: 100px">
-
-  <div style="border:1px solid #ddd;width: 260px;">
-
-    <h3 style="margin-top: 5px;" ><center>ABOUT BLOG</center></h3>
-    <img src="blog.jpg" style="width: 100%;height: 80%s">
-    <div style="margin-left: 20px;margin-top: 20px">
-      <p style="color: gray">
-        Pizza Hut was founded in 1958<br> by brothers Dan and Frank<br> Carney in their hometown of<br> Wichita, Kansas.<br> When a friend suggested opening a pizza<br> parlor—then a rarity—they<br> agreed that the idea could prove successful, <br>and they borrowed $600 from their mother <br>to start a business with partner John Benden.
-
-      </p>
-
-    </div>
-  </div>
-
-</div>   <!-- tab blog row closeee-->
-</div>
-</div>  
-
-
-<div class="container">
-  <div class="row">
-   <div class="col-md-2">
-
-
-    <div class="row">
-
-      <!-- Recent POST open-->
-      <div class="col-sm-12">
-
-        <hr><span class="text">RECENT POSTS</span><hr>
-        <br>
-        <span class="text" style="font-size: 12px;">
-        White Wine Cheesecake</span>
-        <br>
-        <span style="color: gray"><i> July 7, 2015</i></span>
-        <br>
-        <span class="text" style="font-size: 12px">
-        Mac and Cheese Waffles</span>
-        <br>
-        <span style="color: gray"><i> July 7, 2015</i></span>
-        <br>
-        <span class="text" style="font-size: 12px">
-        Easy Sparkling Sangria</span>
-        <br>
-        <span style="color: gray"><i> July 7, 2015</i></span>
-
-        <br>
-        <span class="text" style="font-size: 12px;" > 
-          E6 Mixers You Should Absolutely Never Use
-        </span>
-        <br>
-        <span style="color: gray"><i>May 5, 2015</i></span>
-
-        <br>
-        <span class="text" style="font-size: 12px;">
-          The 5 Biggest Myths About Vodka
-        </span>
-        <br>
-        <span style="color: gray"><i>May15, 2016</i></span>
-
-
-        <br>
-        <span class="text" style="font-size: 12px;">
-        Easy Sparkling Sangria</span>
-        <span style="color: gray"><i> July 18, 2015</i></span>
-      </div>
-    </div>
-  </div>
-  <!-- Recent POST closeeee-->
-
-  <!-- Newss Latterrr -->
-  <div class="col-md-4">
-    <div class="row">
-
-      <div class="col-sm-12">
-
-        <div  style="margin-top: 33px;margin-left: 20px">
-         GET OUR<sup style="color: gray;margin-left: 10px">Put Email</sup>
-         <hr style="width: 140px;margin-left: -40px">
-         NEWSLETTER
-         <br>
-         <button style="background-color: black;color: white;border-radius: 5px;font-size: 12px">
-         SIGN IN</b>
-       </button>
-     </div>
-
-     <!-- Newss Latterrr  closee -->
-   </div> 
- </div>
-</div>
-<div class="col-md-6">
-  <div class="row">
-    <div class="col-sm-12"> 
-
-      <button class="btn btn-light" href="#demo" data-toggle="collapse"  style="float: right;
-      margin-right: 310px;
-      margin-top: 40px;
-      position: relative;
-      "> Catagories</button> 
-      <div id="demo" class="collapse" >
-
-        <div id="accordion"  style="width: 250px;margin-top: 100px">
+      <div id="demo" style="display: none; position: fixed; z-index: 1;left: 110px; top: 90px;">
+        <div id="accordion" >
           <div class="card">
             <div class="card-header">
               <a class="card-link text" data-toggle="collapse" href="#collapseOne">
@@ -1084,101 +171,792 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
+    </li>
+    <li class="nav-item">
+     <a class="btn nav-link text btn-outline-warning" href="#RESERVATION"  
+     style="color: white;border-style:none;; font-size: 15px;"><span style="margin-left:15px;"> Reservation</span></a>
+   </li>
 
-<!-- catagoriessss -->
-<div class="container-fluid">
+   <li class="nav-item">
+    <a class="btn nav-link text btn-outline-warning" href="#MENUScroll"  
+    style="color: white;border-style:none;; font-size: 15px;"><span style="margin-left:15px;">Menu</span></a>  
 
-  <div class="row">
+  </li>
 
-    <div id="FEATURES" style="background-image: url('fotterup.jpg');   background-size: cover; height: 300px;width: 100%;margin-top: 150px;background-attachment: fixed;">
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<div class="container">
-  <div class="row">  
-    <div class="col-sm-12">
+  <li class="nav-item">
+   <a class="btn nav-link text btn-outline-warning" href="#OurGallery"  
+   style="color: white;border-style:none;; font-size: 15px;"><span  style="margin-left:15px;"> Our gallery</span></a>
+ </li>
+ <li class="nav-item">
+   <a class="btn nav-link text btn-outline-warning" href="#OurStandards"  
+   style="color: white;border-style:none;; font-size: 15px;"><span  style="margin-left:15px;"> Our Standards</span></a>
+ </li>
 
 
-      <div  style="text-align: center;">
-       <span style=" font-size: 48px;color: #ffb606; 
-       font-family: Forte;"> our</span> 
-       <br>
-       <span style="color: #2a2a2a;
 
-       text-transform: none;
-       font-size: 54px;
-       font-weight: 800;
-       font-style: normal;
-       text-transform: none;">Standard</span>
-       <br>
-
-       <br>
-       <br>
-       <img src="curly.png" >
-       <br><br><br><br>
-     </div>
-
-     <span style="color: gray"><center>Every so often you might have an outburst in the gallery.
-     </center> </span>
-     <br>
-     <br>
-     <br>
-     <br>
-   </div>
+ <li class="nav-item">
+   <div class="dropdown">
+    <a class="btn nav-link btn-outline-warning"href="#BLOG" style="color: white; border-style:none;;font-size: 15px" >
+     Blog
+   </a>
  </div>
+</li>
+<li class="nav-item">
+ <a class="btn nav-link text btn-outline-warning" href="#about"
+ style="color: white;border-style:none; ;font-size: 15px;">
+ <span  style="margin-left:15px;">About us</span></a>
+</li>
+
+<li class="nav-link">
+ <div class="hrh">
+
+ </div>
+</li>
+<li class="nav-link">
+ <a href="#"   style="color: white" >
+  <span class="iconify" ho data-icon="simple-line-icons:social-facebook"
+  data-inline="false" data-width="20px" data-height="20px"></span>
+</a>
+</li>
+
+
+<li class="nav-link">
+  <a href="#"   style="color: white">
+   <span class="iconify" data-icon="simple-line-icons:social-twitter"
+   data-inline="false"   data-width="20px" data-height="20px"></span>
+ </a></li>
+
+ <li class="nav-link">
+   <a href="#"   style="color: white">
+    <span class="iconify" data-icon="entypo-social:tripadvisor"
+    data-inline="false"  data-width="20px" data-height="20px"></span>
+  </a>
+</li>      
+</ul>
+</div>
+</nav>
+
 </div>
 
 
 
-<div class="container">
+<!-- na vBar Endddd-->
+
+
+<div class="wow fadeInUp">
+  <!-- table reservation -->
+  <div class="container-fluid">
+    <div class="row">
+
+     <div class="col-sm-12" >
+
+      <p class="text-center"  id="RESERVATION" style="font-size: 38px;color: #ffb606; 
+      font-family: Forte; margin-top: 110px;">Book`S </p>
+      <h2 class="text-center">TABLE</h2>
+
+      <br>
+      <br>
+      <p class="text-center" style="color: gray">Opening Hour <b>8:00</b> AM - <b>10:00</b> PM, every day on week.</p>
+    </div>
+  </div>
+</div>
+
+
+<form action="{{url('/tableSubmit')}}" method="post">
+  @csrf
+  <div class="container">
+    <div class="row justify-content-center py-4">
+      <div class="col-md-3"> 
+        <div class="form-group">
+          <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+            <input type="text" name="DT" class="form-control datetimepicker-input" data-target="#datetimepicker1" placeholder="Date" />
+            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+          $(function () {
+            $('#datetimepicker1').datetimepicker();
+          });
+        </script>
+
+      </div>
+      <div class="col-md-3"> 
+        <select class="form-control colorful-select dropdown-primary" name="peoples">
+          <option disabled selected>Choose your option</option>
+          <option value="1">1 People</option>
+          <option value="2">2 People</option>
+          <option value="3">3 People</option>
+          <option value="4">4 People</option>
+          <option value="5">5 People</option>
+          <option value="6">6 People</option>
+          <option value="7">7 People</option>
+          <option value="8">8 People</option>
+          <option value="9">9 People</option>
+          <option value="10">10 People</option>
+
+        </select>
+
+      </div>
+      <div class="col-md-3"> 
+        <button  type="submit" name="tableSubmit" class="button1" style="
+        background: #ffb606;
+        border-color: #ffb606;
+        transition: all .2s ease-in-out 0s;
+        font-weight: 700;
+        width: 250px;
+        height: 40px;
+        border-radius: 5px;
+        /*margin-left: 45px;*/ 
+        color: #2a2a2a;">BOOK A TABLE</button>
+        <p style="float: right; color: gray ;margin-right: 120px;font-size: 12px;">Reserve Now</p>
+
+      </div>
+
+    </div>
+  </div>
+</form>
+</div>
+
+
+
+
+<div class="container-fluid" id="MENUScroll">
   <div class="row">
-    <div class="col-md-12">
 
-      <div class="row">
-        <div class="col-sm-5">
+    <img src="MenuUpper.jpg" alt="Lights" style="width:100%; height: 50%; background-attachment: fixed;">
+  </div>
+</div>
+<div class="wow fadeInUp">
+  <div class="container">
 
-          <div   style=";color: yellow"><h5>1. Choose music carefully. </h5>
-          </div><div class="desc-list">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </div>
+   <div class="row">
 
-          <div   style=";color: yellow"><h5>4. Make deliberate choices with lighting.</h5>
-          </div><div class="desc-list">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable </div>
+    <div class="col-sm-2">
+
+    </div>
+    <div class="col-sm-8" style="margin-top: -60px"  >
+
+
+      <div class="nav nav-tabs nav-fill"  role="tablist" style=" background-color: black;opacity: 0.5">
+        <a class="nav-item nav-link "  data-toggle="tab" href="#JUNKSFOOD" role="tab" >
+          <img src="junksfood.png"> <span style="color: yellow">JUNKSFOOD</span>
+        </a>
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#DRINKS" role="tab">
+          <img src="drinks.png"> <span style="color: yellow">DRINKS</span>
+
+        </a>
+        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#CHEF" role="tab">
+          <img src="chef.png"> <span style="color: yellow">CHEF</span>
+
+        </a>
+        <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#COCKTAIL" role="tab">
+          <img src="coctail.png"> 
+          <span style="color: yellow">COCKTAIL</span>
+        </a>
+      </div>
+
+
+      <div class="tab-content">
+
+        <!-- Fast food -->
+        <div class="tab-pane fade show active" id="JUNKSFOOD" role="tabpanel" ><br>
+
+          <div class="container">
+            <div class="row" >
+              <div class="col-md-3">
+                <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                  <div class="card-content">
+                    <div class="card-img">
+                      <img src="F1.jpeg" width="50px" alt="">
+                      <span style="margin:10px "><h4>Fast Food</h4></span></div>
+                      <div class="card-desc" >
+                        <h3>Thalii</h3>
+                        <small><p> Crispy Garllics Mayoo, Fries With garllic ,Mayo,Tomato, other Kechup </p></small>
+                        <a href="#" class="btn btn-warning">Price:9.9$</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                    <div class="card-content">
+                      <div class="card-img">
+                        <img src="F2.jpeg" width="50px"  alt="">
+                        <span style="margin:10px "><h4>Fast Food</h4></span> </div>
+                        <div class="card-desc" >
+                          <h3>Pizza Crispy</h3>
+                          <small><p>  Fries With Kechup,  and pizzzyummy slices</p></small>
+                          <a href="#" class="btn btn-warning">Price:9.9$</a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3 " >
+                    <div   style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                      <div class="card-content">
+                        <div class="card-img">
+                          <img src="F4.jpeg">
+                          <span style="margin:10px "><h4>Fast Food</h4></span>
+                        </div>
+                        <div class="card-desc" >
+                          <h3> Tower Burger</h3>
+                          <small><p> Smoked quail, Burger crispy egg,Fries With</p></small>
+                          <a href="#" class="btn btn-warning">Price:9.9$</a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+            <div class="tab-pane fade" id="DRINKS" role="tabpanel" ><br>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                      <div class="card-content">
+                        <div class="card-img">
+                          <img src="D1.jpg" alt="">
+                          <span  style="margin-left: 10x"><h4>Dinks</h4></span>
+                        </div>
+                        <div class="card-desc" >
+                          <h3>Combo</h3>
+                          <small><p> g! Kick Your Colds Faster. Kiss Dehydration Headaches Goodbye. Drink Less Soda and much more with other Food dishes</p></small>
+                          <br>
+                          <a href="#" class="btn btn-warning">Price:9.9$</a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                      <div class="card-content">
+                        <div class="card-img">
+                          <img src="D2.jpeg" width="50px" alt="">
+                          <span  style="margin-left: 10x"><h4>Dinks</h4></span>
+                        </div>
+                        <div class="card-desc" >
+                          <h3>Orang</h3>
+                          <small><p> Orang with MArgerittaa</p></small>
+
+                          <a href="#" class="btn btn-warning">Price:9.9$</a>
+
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                      <div class="card-content">
+                        <div class="card-img">
+                          <img src="D3.jpeg" width="50px" alt="">
+                          <span  style="margin-left: 10x"><h4>Dinks</h4></span>
+                        </div>
+                        <div class="card-desc" >
+                          <h3>QUAIL</h3>
+                          <small><p> Wine Bear and other drinks non alcoholicwith from sum Amazing cheff,Drink Less Soda and and  and much more with other Food dishes</p></small>
+                          <a href="#" class="btn btn-warning">Price:9.9$</a>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                   <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                    <div class="card-content">
+                      <div class="card-img">
+                        <img src="C1.jpeg" width="50px" alt="">
+                        <span  style="margin-left: 10x"><h4>Dinks</h4></span>
+                      </div>
+                      <div class="card-desc" >
+                        <h3>B.Merry</h3>
+                        <small><p> Simply Smooke With Nitro</p></small>
+                        <a href="#" class="btn btn-warning">Price:9.9$</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="CHEF" role="tabpanel" ><br>
+
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                    <div class="card-content">
+                      <div class="card-img">
+                        <img src="L3.jpeg" width="50px" alt="">
+                        <span style="margin-left: 5px"><h4>Cheff</h4></span>
+                      </div>
+                      <div class="card-desc" >
+                        <h3>YOGO </h3>
+                        <small><p>Smoked quail, crispy egg, spelt, girolles sandwich to eat for lunch. It is super simple to make and hits the spot every time.Smoked quail, crispy egg, spelt, girolles, with Many souces</p></small>
+                        <a href="#" class="btn btn-warning">Price:9.9$</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                    <div class="card-content">
+                      <div class="card-img">
+                        <img src="L2.jpeg" width="50px" alt="">
+                        <span style="margin-left: 10px"><h4>Cheff</h4></span>
+                      </div>
+                      <div class="card-desc" >
+                        <h3>Desi Dall</h3>
+                        <small><p>  Dall with Many Smoked quail, crispy egg, spelt, girolles</p></small>
+                        <a href="#" class="btn btn-warning">Price:9.9$</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                    <div class="card-content">
+                      <div class="card-img">
+                        <img src="L1.jpeg" width="50px" alt="">
+                        <span style="margin-left: 5px"><h4>Cheff</h4></span>
+                      </div>
+                      <div class="card-desc" >
+                        <h3>Biryani</h3>
+                        <small><p> he exposes food fads and myths, to provide proof and truth</p></small>
+                        <a href="#" class="btn btn-warning">Price:9.9$</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="COCKTAIL" role="tabpanel"><br>
+
+
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                    <div class="card-content">
+                      <div class="card-img">
+                        <img src="C1.jpeg" width="50px" alt="">
+                        <span style="margin-left: 10px"><h4>Coctail</h4></span>
+                      </div>
+                      <div class="card-desc" >
+                        <h3>QUAIL</h3>
+                        <small><p> A collection of drink recipes,  and much more other Drinks including malggerita and other things like Fast Foods</p></small>
+                        <a href="#" class="btn btn-warning">Price:9.9$</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+                    <div class="card-content">
+                      <div class="card-img">
+                        <img src="C2.jpeg" width="50px" alt="">
+                        <span style="margin-left: 10px"><h4>Coctail</h4></span>
+                      </div>
+                      <div class="card-desc" >
+                        <h3>QUAIL</h3>
+                        <small><p>  A collection of drink recipes, techniques, and Boston bar recommendations</p></small>
+                        <a href="#" class="btn btn-warning">Price:9.9$</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container-fluid" >
+ <div class="row">
+  <div style="background-image: url('Dinner.jpg');   background-size: cover; height: 300px; width: 100%; background-size: cover;margin-top: 200px; background-attachment: fixed;">
+    <br><br><br><br><br><br>
+    <h2><span style="color: white"><center><b> DINNER</b></center></span></h2>
+  </div></div>
+</div>
+<div class="wow fadeInUp">
+<div class="container">
+  <div class="row pt-4">
+    <div class="col-md-3">
+      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+        <div class="card-content">
+          <div class="card-img" style="height: 200px">
+            <img src="Din1.jpeg" width="50px" alt="">
+            <span style="margin-left: 5px"><h4>Dinner</h4></span>
+          </div>
+          <div class="card-desc" >
+            <h3>Chiken Frie</h3>
+            <small><p> accessible ingredients you can buy from your local store, and the site also has videos with owner </p></small>
+            <a href="#" class="btn btn-warning">Price:9.9$</a>
+          </div>
 
         </div>
-        <div class="col-sm-2"></div>
-
-        <div class="col-sm-5">
-
-          <div   style=";color: yellow"><h5>1. Choose music carefully. </h5>
-          </div><div class="desc-list">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </div>
-
-          <div   style=";color: yellow"><h5>2. Never serve food that has expired.</h5>
-          </div><div class="desc-list">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable </div>
-
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+        <div class="card-content">
+          <div class="card-img" style="height: 200px">
+            <img src="Din2.jpeg"  alt="">
+            <span style="margin-left: 5px"><h4>Dinner</h4></span>
+          </div>
+          <div class="card-desc" >
+            <h3>Mini Mayo</h3>
+            <small><p>cookbook author Deb Perelman Smoked quail, crispy egg, spelt, girolles</p></small>
+            <a href="#" class="btn btn-warning">Price:9.9$</a>
+          </div>
 
         </div>
+      </div>
+    </div>
 
-        <div class="col-sm-1"></div>
+    <div class="col-md-3">
+     <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+      <div class="card-content">
+        <div class="card-img" style="height: 200px">
+          <img src="Din3.jpeg" alt="">
+          <span style="margin-left: 5px"><h4>Dinner</h4></span>
+        </div>
+        <div class="card-desc" >
+          <h3>Pasta</h3>
+          <small><p> Smoked quail, crispy egg, spelt, girolles cookbook author Deb Perelman</p></small>
+          <a href="#" class="btn btn-warning">Price:9.9$</a>
+        </div>
 
       </div>
     </div>
   </div>
+
 </div>
 
+</div>
+</div>
 
-<!-- our standar close -->
+<div class="container-fluid">
+  <div class="row">
 
-<!-- our gallery  open -->
+    <div style="background-image: url('lunch.jpg');   background-size: cover; height: 300px;width: 100%; background-size: cover;margin-top: 200px; background-attachment: fixed;">
+      <br><br><br><br><br><br>>
 
+      <h2><span style="color: white"><center><b>LUNCH</b></center></span></h2>
+
+    </div>
+  </div>
+</div>
+<div class="wow fadeInUp">
+<div class="container">
+  <div class="row pt-4">
+    <div class="col-md-3">
+      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+        <div class="card-content">
+          <div class="card-img" style="height: 200px">
+            <img src="L1.jpeg" width="50px" alt="">
+            <span style="margin-left: 5px"><h4>Lunch</h4></span>
+          </div>
+          <div class="card-desc" >
+            <h3>Chiken Biryani</h3>
+            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
+            <a href="#" class="btn btn-warning">Price:9.9$</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+        <div class="card-content">
+          <div class="card-img" style="height: 200px">
+            <img src="L3.jpeg" width="50px" alt="">
+            <span style="margin-left: 5px"><h4>Lunch</h4></span>
+          </div>
+          <div class="card-desc" >
+            <h3>Crispy Byte</h3>
+            <small><p> Smoked quail, crispy egg, spelt, girolles</p></small>
+            <a href="#" class="btn btn-warning">Price:9.9$</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- lunch section close -->
+</div>
+<div class="container-fluid">
+ <div class="row">
+  <div style="background-image: url('breakfast.jpg');   background-size: cover; height: 300px;width: 100%;background-position: 50% 195px;
+  margin-top: 100px;
+  background-attachment: fixed;">
+  <br><br><br><br><br><br>
+
+  <h2><span style="color: white"><center><b>BREAKFAST</b></center></span></h2>
+
+
+</div>
+</div>
+</div>
+
+<div class="wow fadeInUp">
+<div class="container">
+  <div class="row pt-4">
+    <div class="col-md-3">
+      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+        <div class="card-content">
+          <div class="card-img" style="height: 200px">
+            <img src="B1.jpeg"  alt="">
+            <span style="margin-left: 5px"><h4>BreakFast</h4></span>
+          </div>
+          <div class="card-desc" >
+            <h3>Omlate Frie</h3>
+            <small><p> Omlate Frie with Nitro Smoked quail, crispy egg, spelt, girolles kechup</p></small>
+            <a href="#" class="btn btn-warning">Price:9.9$</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+        <div class="card-content">
+          <div class="card-img" style="height: 200px">
+            <img src="B2.jpeg"  alt="">
+            <span style="margin-left: 5px"><h4>BreakFast</h4></span>
+          </div>
+          <div class="card-desc" >
+            <h3>Coffe</h3>
+            <small><p> Coffee with beans that crushes hurt of Many peoples and Much Hottness</p></small>
+            <a href="#" class="btn btn-warning">Price:9.9$</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+        <div class="card-content">
+          <div class="card-img" style="height: 200px">
+            <img src="B3.jpeg"  alt="">
+            <span style="margin-left: 5px"><h4>Breakfast</h4></span>
+          </div>
+          <div class="card-desc" >
+            <h3>Cherry Beans</h3>
+            <small><p> Cherry Beans with and Smoked quail With Nitrogen from crispy egg</p></small>
+            <a href="#" class="btn btn-warning">Price:9.9$</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+     <div  style="border-radius: 5px;border: 1px solid gray; border: 1px solid #ddd; ">
+      <div class="card-content">
+       <div class="card-img" style="height: 200px">
+        <img src="Dinner.jpg"  alt="">
+        <span style="margin-left: 5px"><h4>BreakFast</h4></span>
+      </div>
+      <div class="card-desc" >
+        <h3>Prathy Ghee</h3>
+        <small><p> Ghee Prathy that made by Special Punjabi peoples Smoked quail.</p></small>
+        <a href="#" class="btn btn-warning">Price:9.9$</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div alt="" 
+    style=" background-image: url('eventpic.jpg');  background-size: cover; height: 300px;width: 100%;margin-top: 100px">
+  </div>
+</div>
+</div>
+<div id="OurGallery">
+
+</div>
+
+<!-- Our gallery -->
+<!--==========================
+      Gallery Section
+      ============================-->
+      <section id="gallery" class="wow fadeInUp">
+
+        <div style="text-align: center;" >
+          <span style=" font-size: 48px;color: #ffb606; 
+          font-family: Forte;"> our</span> 
+          <br>
+          <span style="color: #2a2a2a;
+
+          text-transform: none;
+          font-size: 54px;
+          font-weight: 800;
+          font-style: normal;
+          text-transform: none;">Gallery</span>
+          <br>
+          <br>
+
+
+        </div>
+
+        <span style="color: gray;"><center>Every so often you might have an outburst in the gallery
+        </center> </span>
+        <br>
+        <br>
+
+        <div class="owl-carousel gallery-carousel">
+          <a href="gal/img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel">
+            <img src="gal/img/gallery/1.jpg" alt="">
+          </a>
+          <a href="gal/img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="gal/img/gallery/2.jpg" alt=""></a>
+          <a href="gal/img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="gal/img/gallery/3.jpg" alt=""></a>
+          <a href="gal/img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="gal/img/gallery/4.jpg" alt=""></a>
+          <a href="gal/img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="gal/img/gallery/5.jpg" alt=""></a>
+          <a href="gal/img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="gal/img/gallery/6.jpg" alt=""></a>
+          <a href="gal/img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="gal/img/gallery/7.jpg" alt=""></a>
+          <a href="gal/img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="gal/img/gallery/8.jpg" alt=""></a>
+        </div>
+
+      </section>
+
+      <!-- Our gallery --> 
+
+
+      <!-- catagoriessss -->
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div id="FEATURES" style="background-image: url('fotterup.jpg');   background-size: cover; height: 300px;width: 100%;margin-top: 150px;background-attachment: fixed;">
+          </div>
+        </div>
+      </div>
+
+
+
+<div class="wow fadeInUp">
+
+      <div class="container" id="OurStandards">
+        <div class="row">  
+          <div class="col-sm-12">
+
+
+            <div  style="text-align: center;">
+             <span style=" font-size: 48px;color: #ffb606; 
+             font-family: Forte;"> our</span> 
+             <br>
+             <span style="color: #2a2a2a;
+
+             text-transform: none;
+             font-size: 54px;
+             font-weight: 800;
+             font-style: normal;
+             text-transform: none;">Standard</span>
+             <br>
+
+             <br>
+             <br>
+             <img src="curly.png" >
+             <br><br><br><br>
+           </div>
+
+           <span style="color: gray"><center>Every so often you might have an outburst in the gallery.
+           </center> </span>
+           <br>
+           <br>
+           <br>
+           <br>
+         </div>
+       </div>
+     </div>
+
+
+
+     <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+          <div class="row">
+            <div class="col-sm-5">
+
+              <div   style=";color: yellow"><h5>1. Choose music carefully. </h5>
+              </div><div class="desc-list">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </div>
+
+              <div   style=";color: yellow"><h5>4. Make deliberate choices with lighting.</h5>
+              </div><div class="desc-list">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable </div>
+
+            </div>
+            <div class="col-sm-2"></div>
+
+            <div class="col-sm-5">
+
+              <div   style=";color: yellow"><h5>1. Choose music carefully. </h5>
+              </div><div class="desc-list">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </div>
+
+              <div   style=";color: yellow"><h5>2. Never serve food that has expired.</h5>
+              </div><div class="desc-list">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable </div>
+
+
+            </div>
+
+            <div class="col-sm-1"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="FEATURES" style="background-image: url('gallery.jpg');   background-size: cover; height: 300px;width: 100%;margin-top: 150px;background-attachment: fixed;">
+    </div>
+
+    <!-- our standar close -->
+
+    <!-- our gallery  open -->
+<!-- 
 
 <div class="container-fluid">
 
@@ -1189,7 +967,6 @@
   </div>
 </div>
 <div class="container">
-
   <div class="row">  
     <div class="col-md-2">
     </div>
@@ -1224,7 +1001,7 @@
     </div>  
   </div>
 </div>
-<!--  gallery row  closeee  -->
+<--  gallery row  closeee  --> 
 
 
 
@@ -1234,7 +1011,7 @@
 
 
 
-
+<!-- 
 <div class="container" >
  <div class="row">
   <div class="col-md-4">
@@ -1283,9 +1060,9 @@
                 }
                 x[slideIndex-1].style.display = "block";  
               }
-            </script>     
+            </script>  -->    
             <!------ slider script ---------->
-
+<!-- 
           </div>
         </div>
       </div>
@@ -1359,25 +1136,26 @@
           Load More...</button>
           <button type="button" class="btn btn-primary" style="margin-left: 20px;margin-top: 25px ;font-size: 12px">Follow on Instagram</button> 
 
-        </div>
+        </div> -->
 
         <!--  whats newwww closeeeeee -->
 
-
+<!-- 
       </div>
     </div>
   </div>
 
 </div>
-</div>
+</div> -->
 
-<div class="container" style="margin-top: 40px">
+<!-- <div class="container" style="margin-top: 40px">
   <hr style="background-color:#2a2a2a;">
 
-</div>
+</div> -->
+<div class="wow fadeInUp">
 <div class="container" style="margin-top: 20px">
 	
-  <div class="row">
+  <div class="row" id="BLOG">
 
 
     <br>
@@ -1398,7 +1176,7 @@
 
 
 <!-- details card section starts from here -->
-<section class="details-card" id="BLOG">
+<section class="details-card" >
 
 
 
@@ -1409,120 +1187,121 @@
       <div  class="row">
         <div class="col-sm-12">
           <div  style="border-radius: 5px;border: 1px solid gray;margin-left: 0px; border: 1px solid #ddd; margin-top: 30px">
-                <div class="card-content">
-                    <div class="card-img">
-                        <img src="https://placeimg.com/380/230/animals" alt="">
-                        <span><h4>Dinks</h4></span>
-                    </div>
-                    <div class="card-desc" >
-                        <h3>QUAIL</h3>
-                        <p> Smoked quail, crispy egg, spelt, girolles</p>
-                            <a href="#" class="btn-card " >Price: <b>9.9$</b></a> 
-                 
-                    </div>
-                 
-                </div>
-                </div>
+            <div class="card-content">
+              <div class="card-img">
+                <img src="https://placeimg.com/380/230/animals" alt="">
+                <span><h4>Dinks</h4></span>
+              </div>
+              <div class="card-desc" >
+                <h3>QUAIL</h3>
+                <p> Smoked quail, crispy egg, spelt, girolles</p>
+                <a href="#" class="btn-card " >Price: <b>9.9$</b></a> 
+
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-md-4">
       <div  class="row">
         <div class="col-sm-12">
- <div  style="border-radius: 5px;border: 1px solid gray;margin-left: 0px; border: 1px solid #ddd; margin-top: 30px">
-                <div class="card-content">
-                    <div class="card-img">
-                        <img src="https://placeimg.com/380/230/animals" alt="">
-                        <span><h4>Dinks</h4></span>
-                    </div>
-                    <div class="card-desc" >
-                        <h3>QUAIL</h3>
-                        <p> Smoked quail, crispy egg, spelt, girolles</p>
-                            <a href="#" class="btn-card " >Price: <b>9.9$</b></a> 
-                 
-                    </div>
-                 
-                </div>
-                </div>
-          
-        </div></div>
-      </div>
-      <div class="col-md-4">
-        <div  class="row">
-          <div class="col-sm-12">
- <div  style="border-radius: 5px;border: 1px solid gray;margin-left: 0px; border: 1px solid #ddd; margin-top: 30px">
-                <div class="card-content">
-                    <div class="card-img">
-                        <img src="https://placeimg.com/380/230/animals" alt="">
-                        <span><h4>Dinks</h4></span>
-                    </div>
-                    <div class="card-desc" >
-                        <h3>QUAIL</h3>
-                        <p> Smoked quail, crispy egg, spelt, girolles</p>
-                            <a href="#" class="btn-card " >Price: <b>9.9$</b></a> 
-                 
-                    </div>
-                 
-                </div>
-                </div>
-           
+         <div  style="border-radius: 5px;border: 1px solid gray;margin-left: 0px; border: 1px solid #ddd; margin-top: 30px">
+          <div class="card-content">
+            <div class="card-img">
+              <img src="https://placeimg.com/380/230/animals" alt="">
+              <span><h4>Dinks</h4></span>
+            </div>
+            <div class="card-desc" >
+              <h3>QUAIL</h3>
+              <p> Smoked quail, crispy egg, spelt, girolles</p>
+              <a href="#" class="btn-card " >Price: <b>9.9$</b></a> 
 
-          </div></div>
+            </div>
+
+          </div>
         </div>
-      </div>
-    </div>  
+
+      </div></div>
+    </div>
+    <div class="col-md-4">
+      <div  class="row">
+        <div class="col-sm-12">
+         <div  style="border-radius: 5px;border: 1px solid gray;margin-left: 0px; border: 1px solid #ddd; margin-top: 30px">
+          <div class="card-content">
+            <div class="card-img">
+              <img src="https://placeimg.com/380/230/animals" alt="">
+              <span><h4>Dinks</h4></span>
+            </div>
+            <div class="card-desc" >
+              <h3>QUAIL</h3>
+              <p> Smoked quail, crispy egg, spelt, girolles</p>
+              <a href="#" class="btn-card " >Price: <b>9.9$</b></a> 
+
+            </div>
+
+          </div>
+        </div>
 
 
-
-    <!-- Card -->
-
-  </section>
-  <!-- details card section starts from here -->
-
-  <!------ slider script ---------->
-
-  <!-- this Blog section closeeee-->
-  <!-- Complain Button -->
-  <div style="display: block; position: fixed; z-index: 1;right: 20px; bottom: 20px;">
-   <a class="btn btn-warning rounded waves-effect waves-light" data-toggle="modal" data-target="#exampleModalCenter">Complains</a>
- </div>
- <!-- comapin blose-->
- <!-- modal for feedback -->
-
- <!-- Modal -->
- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-     <div class="modal-header bg-warning">
-      <h5 class="modal-title text-dark" id="exampleModalCenterTitle">Max Restaurant Complains</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-       <span aria-hidden="true">&times;</span>
-     </button>
-   </div>
-
-
-
-   <form action="{{url('/submitC')}}" method="post">
-     @csrf
-     <div class="modal-body">
-      <div class="form-group">
-       <label for="feedback" class="text-dark">Your Complains:</label>
-       <textarea class="form-control text-dark text-center" rows="5"
-       name="complains" id="complains" style="background-color: #D2D5D7;"></textarea>
-
-     </div>
-
-   </div>
-   <div class="modal-footer mx-auto">
-
-    <button type="submit"  class="btn btn-outline-danger rounded waves-effect waves-light">Submit</button>
-
-
-
-
-
-
+      </div></div>
+    </div>
   </div>
+</div>  
+
+
+
+<!-- Card -->
+
+</section>
+</div>
+<!-- details card section starts from here -->
+
+<!------ slider script ---------->
+
+<!-- this Blog section closeeee-->
+<!-- Complain Button -->
+<div style="display: block; position: fixed; z-index: 1;right: 40px; bottom: 20px;">
+ <a class="btn btn-warning rounded waves-effect waves-light" data-toggle="modal" data-target="#exampleModalCenter">Complains</a>
+</div>
+<!-- comapin blose-->
+<!-- modal for feedback -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-content">
+   <div class="modal-header bg-warning">
+    <h5 class="modal-title text-dark" id="exampleModalCenterTitle">Max Restaurant Complains</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+   </button>
+ </div>
+
+
+
+ <form action="{{url('/submitC')}}" method="post">
+   @csrf
+   <div class="modal-body">
+    <div class="form-group">
+     <label for="feedback" class="text-dark">Your Complains:</label>
+     <textarea class="form-control text-dark text-center" rows="5"
+     name="complains" id="complains" style="background-color: #D2D5D7;"></textarea>
+
+   </div>
+
+ </div>
+ <div class="modal-footer mx-auto">
+
+  <button type="submit"  class="btn btn-outline-danger rounded waves-effect waves-light">Submit</button>
+
+
+
+
+
+
+</div>
 </form>
 
 
@@ -1541,7 +1320,7 @@
 
 
 <!-- footterrrrrr opeeennn -->
-<div class="container-fluid">
+<div class="container-fluid" id="about">
 
   <div class="row" style="background-color: #181818;height: 420px;margin-top: 50px">
 
@@ -1601,6 +1380,23 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+
+<!-- JavaScript Libraries -->
+<script src="{{asset('gal/lib/jquery/jquery.min.js')}}"></script>
+<script src="{{asset('gal/lib/jquery/jquery-migrate.min.js')}}"></script>
+<script src="{{asset('gal/lib/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('gal/lib/easing/easing.min.js')}}"></script>
+<script src="{{asset('gal/lib/superfish/hoverIntent.js')}}"></script>
+<script src="{{asset('gal/lib/superfish/superfish.min.js')}}"></script>
+<script src="{{asset('gal/lib/wow/wow.min.js')}}"></script>
+<script src="{{asset('gal/lib/venobox/venobox.min.js')}}"></script>
+<script src="{{asset('gal/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+
+<!-- Contact Form JavaScript File -->
+<script src="{{asset('gal/contactform/contactform.js')}}"></script>
+
+<!-- Template Main Javascript File -->
+<script src="{{asset('gal/js/main.js')}}"></script>
 
 </body>
 </html>
