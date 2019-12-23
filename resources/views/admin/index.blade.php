@@ -21,11 +21,7 @@
 
 @section('content')
 <!-- body -->
-<div class="container">                                      
-  
 
-	
-</div>
 <div class="container-fluid" style="" >
 	<div class="container">
 		<div class="row py-5">

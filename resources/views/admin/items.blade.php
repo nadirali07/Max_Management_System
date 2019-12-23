@@ -52,15 +52,6 @@
 							<tbody >
 								
 							</tbody>
-							<!-- <tfoot>
-								<tr>
-									<th>Item ID</th>
-									<th>Item Name</th>
-									<th>Available Stock</th>
-									<th>Price</th>
-									<th width="150px">Action</th>
-								</tr>
-							</tfoot> -->
 						</table>
 					</div>
 					<div class="card-footer small text-white" style=" background: #1C9CD6;">
@@ -82,29 +73,6 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-            <!-- <div class="modal-body">
-                <form id="itemForm" name="itemForm" class="form-horizontal">
-                   <input type="hidden" name="item_id" id="item_id">
-                    <div class="form-group">
-                        <label for="name" class="col-sm-2 control-label">Title</label>
-                        <div class="col-sm-12">
-                            <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" value="" maxlength="50" required="">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">Details</label>
-                        <div class="col-sm-12">
-                            <textarea id="author" name="author" required="" placeholder="Enter Author" class="form-control"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-offset-2 col-sm-10">
-                     <button type="submit" class="btn btn-primary" id="saveBtn" value="create">Save changes
-                     </button>
-                    </div>
-                </form>
-            </div> -->
             <div class="modal-body">
             	<form id="itemForm" name="itemForm" method="POST" enctype="multipart/form-data" name="add_product">
             		{{ csrf_field() }}
@@ -142,116 +110,14 @@
 
 <!-- ajex modal end -->
 
-
-<!-- modal for items start -->
-
-
-<!-- Modal -->
-<!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header bg-dark text-white">
-				<h5 class="modal-title" id="exampleModalLongTitle">NEW ITEM DETAILS:</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<form action="{{ route('items.store') }}" method="POST" enctype="multipart/form-data" name="add_product">
-					{{ csrf_field() }}
-					<div class="form-group">
-						<label>Item Name:</label>
-						<input type="text" name="item_name" id="item_name" class="form-control" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label> Quantity:</label>
-						<input type="number" name="item_qty" id="item_qty" class="form-control" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label> Price:</label>
-						<input type="number" name="item_price" id="item_price" class="form-control" placeholder="">
-					</div>
-					<div class="form-group ">
-						<label> Upload Product Image:</label>
-						<input type="file" name="item_img" id="file">
-					</div>
-
-
-				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-success">Save</button>
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</div> -->
-<!-- model end for items -->
-
-
-<!-- edit modal start-->
-
-<!-- Modal -->
-<div class="modal fade" id="editModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
-		<div class="modal-content">
-			<div class="modal-header bg-dark text-white">
-				<h5 class="modal-title" id="exampleModalLongTitle">ITEM DETAILS:</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<form action="{{ route('items.store') }}" method="POST" enctype="multipart/form-data" name="add_product">
-					{{ csrf_field() }}
-					{{ method_field('PUT') }}
-
-					<div class="form-group">
-						<label>Item Name:</label>
-						<input type="text" name="u_item_name" id="u_item_name" class="form-control" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label> Quantity:</label>
-						<input type="number" name="u_item_qty" id="u_item_qty" class="form-control" placeholder="">
-					</div>
-
-					<div class="form-group">
-						<label> Price:</label>
-						<input type="number" name="u_item_price" id="u_item_price" class="form-control" placeholder="">
-					</div>
-					<div class="form-group ">
-						<label> Upload Product Image:</label>
-						<input type="file" name="item_img" id="file">
-					</div>
-
-
-				</div>
-				<div class="modal-footer">
-					<button type="submit" class="btn btn-success">Save</button>
-					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-
-
-<!-- edit model end -->
-
-
-
-
 @endsection
 
 @section('footer')
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$(document).ready(function() {
 		$('#example').DataTable();
 	} );
-</script>
+</script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
 <script src="{{asset('https://code.jquery.com/jquery-3.3.1.js')}}"></script>
@@ -281,8 +147,6 @@
 			]
 		});
 		$('#createNewItem').click(function () {
-        // $('#saveBtn').val("create-item");
-        // $('#item_id').val('');
         $('#itemForm').trigger("reset");
         // $('#modelHeading').html("Create New item");
         $('#ajaxModel').modal('show');

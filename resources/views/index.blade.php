@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>TheEvent - Bootstrap Event Template</title>
+  <title>Max Restaurant System</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -26,13 +26,8 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('gal/css/style.css')}}">
   <!--  <link href="{{ asset('gal/css/style.css')}}" rel="stylesheet"> -->
 
-  <!-- =======================================================
-    Theme Name: TheEvent
-    Theme URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-    ======================================================= -->
-    <title></title>
+  
+    
     <link rel="stylesheet" href="{{asset('/css/style.css') }}"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -955,203 +950,7 @@
 
     <!-- our standar close -->
 
-    <!-- our gallery  open -->
-<!-- 
-
-<div class="container-fluid">
-
-  <div class="row">
-
-    <div id="FEATURES" style="background-image: url('gallery.jpg');   background-size: cover; height: 300px;width: 100%;margin-top: 150px;background-attachment: fixed;">
-    </div>
-  </div>
-</div>
-<div class="container">
-  <div class="row">  
-    <div class="col-md-2">
-    </div>
-    <div class="col-md-8">
-      <div class="row">  
-        <div class="col-sm-12">
-
-
-          <div style="text-align: center;" >
-            <span style=" font-size: 48px;color: #ffb606; 
-            font-family: Forte;"> our</span> 
-            <br>
-            <span style="color: #2a2a2a;
-
-            text-transform: none;
-            font-size: 54px;
-            font-weight: 800;
-            font-style: normal;
-            text-transform: none;">Gallery</span>
-            <br>
-            <br>
-
-
-          </div>
-
-          <span style="color: gray;"><center>Every so often you might have an outburst in the gallery
-          </center> </span>
-          <br>
-          <br>
-        </div>
-      </div>
-    </div>  
-  </div>
-</div>
-<--  gallery row  closeee  --> 
-
-
-
-<!--  whats newwww  opeeennnnn-->
-
-<!--  Sliderrrrrrrrrr -->
-
-
-
-<!-- 
-<div class="container" >
- <div class="row">
-  <div class="col-md-4">
-
-    <div class="row">
-      <div class="col-sm-12">
-        <div  style="border: 1px solid #ddd;border:1px solid #ddd;width: 300px ;height: 340px;color: #666;font-size: 12px" >
-
-
-          <button class="w3-button w3-black w3-display-left btn btn-light" onclick="plusDivs(-1)" style="margin-left:10px;">&#10094;</button>
-
-          <button class="w3-button w3-black w3-display-right btn btn-light" onclick="plusDivs(1)" style="float: right;  margin-right: 10px">&#10095;</button>
-
-          <img class="mySlides" src="gg.jpg" style="width:84%;height:40%; margin-left: 25px">
-          <img class="mySlides" src="Main_page.jpg" style="width:84%;height:40%;">
-          <img  class="mySlides"   src="chef.jpg" style="width:84%;height:40%;">
-          <img class="mySlides" src="lunch.jpg" style="width:84%;height:40%;">
-
-          <img class="mySlides" src="ice.jpg" style="width:84%;height:40% ">
-          <img class="mySlides" src="chef.png" style="width:84%;height:40%;">
-          <br>
-
-          <h4><span class="text" style="margin-left: 15px ;margin-top: 15px" ><b>Resturant</b></span></h4>
-          Smoked quail, crispy egg, spelt, girolles, parsley
-          <br>
-          <br>
-
-          <I> posted by<span style="color: #ddd"> Admin</span></I></p>
-        </div>
-
-        <script>
-          var slideIndex = 1;
-          showDivs(slideIndex);
-
-          function plusDivs(n) {
-            showDivs(slideIndex += n);
-          }
-
-          function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = x.length}
-                for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";  
-                }
-                x[slideIndex-1].style.display = "block";  
-              }
-            </script>  -->    
-            <!------ slider script ---------->
-<!-- 
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-md-4">
-
-        <div class="row">
-          <div class="col-sm-12"> 
-
-            <div style="border:1px solid #ddd;width: 300px;height: 340px ">
-
-              <h4 class="text"  style="margin-top: 15px; color:gray;margin-left: 75px" ><b>TWITTER</b></h4>
-              <div style="margin-left: 20px;color: #666;font-size: 12px">
-                Make sure you are following<span style="cursor: pointer;">@EnvatoMarket</span>
-                for all your ThemeForest needs
-                <br>
-                <span style="color: #999999 ;font-size: 12px">Sep, 15 2014</span>
-                <br>
-                Eight marketplaces, one Envato Market. Join us:
-                <a href=" http://t.co/cLo2w7rWOx" class="text" style="cursor: pointer;">http://t.co/cLo2w7rWOx</a>
-                <br>
-                Eight marketplaces, one Envato Market. Join us:
-                <a href=" http://t.co/cLo2w7rWOx" class="text" style="cursor: pointer;">http://t.co/cLo2w7rWOx</a>
-                <br>
-                <span style="color: #999999 ;font-size: 12px">Aug, 13 2014</span>
-                <br>
-                <span style="color: yellow" >  @realseojoe</span> why thank you sir! We'd love to show
-                <br><br>
-                you around 🙂 ^Dan
-                <br>
-                <span style="color: #999999 ;font-size: 12px">Aug, 13 2014</span>
-
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-       <div class="row">
-         <div class="col-sm-12">
-           <div class="p-3 text-center" style="border:1px solid #ddd;
-           width: 300px;color: #666;font-size: 12px;height: 340px">
-           <a > 
-            <img  class="m-2"src="gg.jpg" style="width:100px;height: 60px;cursor: pointer; ">
-          </a>
-          <a>
-            <img class="m-2" src="ice.jpg" style="width:100px;height: 60px;cursor: pointer;">
-
-          </a>
-          <br>
-          <a > 
-            <img class="m-2"src="lunch.jpg" style="width:100px;height: 60px;cursor: pointer;">
-          </a>
-          <a>
-            <img  class="m-2"src="lunch.jpg" style="width:100px;height: 60px;cursor: pointer;">
-
-          </a>
-          <br>
-          <a > 
-            <img class="m-2" src="gg.jpg" style="width:100px;height: 60px;cursor: pointer;">
-          </a>
-          <a>
-            <img class="m-2" src="gg.jpg" style="width:100px;height: 60px;cursor: pointer;">
-
-          </a>
-
-          <button type="button" style="height: 34px;width: 100px;margin-top: 25px ;font-size: 12px" class="btn btn-dark">
-          Load More...</button>
-          <button type="button" class="btn btn-primary" style="margin-left: 20px;margin-top: 25px ;font-size: 12px">Follow on Instagram</button> 
-
-        </div> -->
-
-        <!--  whats newwww closeeeeee -->
-
-<!-- 
-      </div>
-    </div>
-  </div>
-
-</div>
-</div> -->
-
-<!-- <div class="container" style="margin-top: 40px">
-  <hr style="background-color:#2a2a2a;">
-
-</div> -->
+    
 <div class="wow fadeInUp">
 <div class="container" style="margin-top: 20px">
 	
@@ -1188,14 +987,14 @@
         <div class="col-sm-12">
           <div  style="border-radius: 5px;border: 1px solid gray;margin-left: 0px; border: 1px solid #ddd; margin-top: 30px">
             <div class="card-content">
-              <div class="card-img">
-                <img src="https://placeimg.com/380/230/animals" alt="">
-                <span><h4>Dinks</h4></span>
+              <div class="card-img " style="height: 300px" >
+                <img src="blog2.jpg"  alt="">
+                
               </div>
               <div class="card-desc" >
-                <h3>QUAIL</h3>
-                <p> Smoked quail, crispy egg, spelt, girolles</p>
-                <a href="#" class="btn-card " >Price: <b>9.9$</b></a> 
+                <h3>know about sugar free</h3>
+                <p> This year the challenge starts on January 6th (the first Monday of the month) and ends on January 31st. During that time, we’ll be sharing a bunch of yum-town recipes that are made with just regular, familiar, real food </p>
+               
 
               </div>
 
@@ -1208,15 +1007,15 @@
       <div  class="row">
         <div class="col-sm-12">
          <div  style="border-radius: 5px;border: 1px solid gray;margin-left: 0px; border: 1px solid #ddd; margin-top: 30px">
-          <div class="card-content">
-            <div class="card-img">
-              <img src="https://placeimg.com/380/230/animals" alt="">
-              <span><h4>Dinks</h4></span>
+          <div class="card-content" >
+            <div class="card-img" style="height: 300px">
+              <img src="blog3.jpg" alt="">
+             
             </div>
             <div class="card-desc" >
-              <h3>QUAIL</h3>
-              <p> Smoked quail, crispy egg, spelt, girolles</p>
-              <a href="#" class="btn-card " >Price: <b>9.9$</b></a> 
+              <h3>best recipes to make before the end of 2019</h3>
+              <p> Fun fact: at the time this is written, there are almost 1,000 recipes on Pinch of Yum. ONE THOUSAND RECIPES. That’s enough for a different recipe every day for like…almost three years? Woah.</p>
+              
 
             </div>
 
@@ -1230,14 +1029,14 @@
         <div class="col-sm-12">
          <div  style="border-radius: 5px;border: 1px solid gray;margin-left: 0px; border: 1px solid #ddd; margin-top: 30px">
           <div class="card-content">
-            <div class="card-img">
-              <img src="https://placeimg.com/380/230/animals" alt="">
-              <span><h4>Dinks</h4></span>
+            <div class="card-img" style="height: 300px">
+              <img src="blog4.jpg" alt="">
+        
             </div>
             <div class="card-desc" >
-              <h3>QUAIL</h3>
-              <p> Smoked quail, crispy egg, spelt, girolles</p>
-              <a href="#" class="btn-card " >Price: <b>9.9$</b></a> 
+              <h3>the best swedish meatballs</h3>
+              <p>I grew up eating a lot of Swedish meatballs, and I have to say – Swedish meatball recipes are varied and they all kind of have their own personality. But after testing several </p>
+             
 
             </div>
 

@@ -64,33 +64,7 @@ class ItemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-//     public function store(Request $request)
-//     {
-//         $request->validate([
-//             'item_name' => 'required',
-//             'item_qty' => 'required',
-//             'item_price' => 'required',
-//             'item_img' => 'nullable',
-//         ]);
-//         $item = new Item;
-//         $item->item_name = $request->input('item_name');
-//         $item->item_qty = $request->input('item_qty');
-//         $item->item_price = $request->input('item_price');
-//         if ($request->hasfile('item_img')) {
-//          $file=$request->file('item_img');
-//          $extension=$file->getClientOriginalName();
-//          $filename=time(). "." . $extension;
-//          $file->move(public_path()."/images",$filename);
-//          $item->item_img=$filename;
-//      }
-//      else
-//      {
-//         return $request;
-//         $item->item_img="";
-//     }
-//     $item->save();
-//     return Redirect::to('items')->with('success','Greate! Product Added successfully.');
-// }
+ 
     public function store(Request $request)
     {
         if ($request->hasfile('item_img')) {

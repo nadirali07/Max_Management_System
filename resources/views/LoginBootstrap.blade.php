@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title></title>
+  <title>Login | Max Admin</title>
   <style type="text/css">
     @charset "utf-8";
 
