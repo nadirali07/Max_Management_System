@@ -22,6 +22,8 @@
 @section('content')
 <!-- body -->
 
+
+
 <div class="container-fluid" style="" >
 	<div class="container">
 		<div class="row py-5">
@@ -75,6 +77,7 @@
 				</div>
 				<script type="text/javascript">
 					function addrow(item_name,item_price) {
+						$("#result").hide();
 						var t = document.getElementById("table");
 						var totalrows = document.getElementById("table").rows.length;
 						var row = table.insertRow(totalrows);
@@ -156,6 +159,8 @@
 				<form id="saleForm" name="saleForm" method="POST">
 					{{ csrf_field() }}
 					<input type="hidden" name="order_no" id="order_no">
+					<div class="alert bg-success text-white py-0" id="result" style="display: none;" role="alert">
+					</div>
 					<div class="row py-3">
 						<div class="col-sm-4">
 							<label for="coupan" class="text-white font-weight-bold">Coupan No:</label>
@@ -186,7 +191,6 @@
 				</form>
 			</div>
 			<!-- right side div -->
-
 			<script type="text/javascript">
 				// caculate total/sum value
 				
@@ -251,7 +255,6 @@ crossorigin="anonymous"></script>
 		});
 		$('#saveBtn').click(function (e) {
 			e.preventDefault();
-			$(this).html('Save');
 
 			$.ajax({
 				data: {
@@ -266,6 +269,7 @@ crossorigin="anonymous"></script>
 
 
 					deltable();
+					$("#result").html(data).show();
 					
 
 
@@ -273,6 +277,7 @@ crossorigin="anonymous"></script>
 
           },
           error: function (data) {
+          	alert('Not Okay');
           	console.log('Error:', data);
           	$('#saveBtn').html('Save Changes');
           }

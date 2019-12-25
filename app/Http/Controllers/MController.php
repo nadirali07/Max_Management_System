@@ -99,7 +99,7 @@ class MController extends Controller
     management::updateOrCreate(['mem_id' => $request->mem_id],
         ['mem_name' => $request->mem_name, 'position' => $request->position, 'age' => $request->age, 'salary' => $request->salary]);
 
-    return response()->json(['success'=>'Item saved successfully.']);
+    return response()->json(['Member Record saved successfully.']);
 }
 
     /**
@@ -147,6 +147,6 @@ class MController extends Controller
     {
         management::find($id)->delete();
 
-        return response()->json(['success'=>'management deleted successfully.']);
+        return response()->json(['Member Record deleted successfully.']);
     }
 }

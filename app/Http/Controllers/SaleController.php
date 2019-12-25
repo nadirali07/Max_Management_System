@@ -50,7 +50,7 @@ class SaleController extends Controller
         Sale::updateOrCreate(['order_no' => $request->order_no],
                 ['amount' => $request->stotal, 'discount' => $request->sdiscount, 'total_amount' => $request->dtotal ]);
 
-        return response()->json(['success'=>'Sale Record saved successfully.']);
+        return response()->json(['Sale Record saved successfully.']);
     }
 
 

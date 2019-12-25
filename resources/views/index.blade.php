@@ -116,7 +116,7 @@
           $("#demo").toggle("slow");
         });
       </script>
-      <div id="demo" style="display: none; position: fixed; z-index: 1;left: 110px; top: 90px;">
+      <div id="demo" style="display: none; position: fixed; z-index: 1;left: 410px; top: 85px;">
         <div id="accordion" >
           <div class="card">
             <div class="card-header">
@@ -335,18 +335,18 @@
 
 
       <div class="nav nav-tabs nav-fill"  role="tablist" style=" background-color: black;opacity: 0.5">
-        <a class="nav-item nav-link "  data-toggle="tab" href="#JUNKSFOOD" role="tab" >
+        <a class="nav-item nav-link bg-dark "  data-toggle="tab" href="#JUNKSFOOD" role="tab" >
           <img src="junksfood.png"> <span style="color: yellow">JUNKSFOOD</span>
         </a>
-        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#DRINKS" role="tab">
+        <a class="nav-item nav-link bg-dark" id="nav-profile-tab" data-toggle="tab" href="#DRINKS" role="tab">
           <img src="drinks.png"> <span style="color: yellow">DRINKS</span>
 
         </a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#CHEF" role="tab">
+        <a class="nav-item nav-link bg-dark" id="nav-contact-tab" data-toggle="tab" href="#CHEF" role="tab">
           <img src="chef.png"> <span style="color: yellow">CHEF</span>
 
         </a>
-        <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#COCKTAIL" role="tab">
+        <a class="nav-item nav-link bg-dark" id="nav-about-tab" data-toggle="tab" href="#COCKTAIL" role="tab">
           <img src="coctail.png"> 
           <span style="color: yellow">COCKTAIL</span>
         </a>

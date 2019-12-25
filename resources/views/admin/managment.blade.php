@@ -21,8 +21,12 @@
 @section('content')
 <!-- body -->
 <div class="container-fluid" style="" >
+  
 	<div class="container">
-		<div class="row py-5">
+    <div class="alert bg-success text-white text-center mt-5" id="result"  role="alert" style="display: none;"></div>
+         <div class="alert bg-danger text-white text-center mt-5" id="dresult"  role="alert" style="display: none;"></div>
+		<div class="row pb-5">
+
 			<div class="col-lg-12">
 				<div class="card bg-transparent text-white" >
 					<div class="card-header font-weight-bold" style="font-size: 20px; background: #1C9CD6;">
@@ -188,6 +192,8 @@
               $('#itemForm').trigger("reset");
           	$('#ajaxModel').modal('hide');
               table.draw();
+              $("#result").html(data).show();
+              $("#dresult").html(data).hide();
 
           },
           error: function (data) {
@@ -196,35 +202,7 @@
           }
       });
 		});
-   $('#saveBtn').click(function (e) {
-
-   	e.preventDefault();
-
-   	$(this).html('Save');
-   	var form = $('#memForm')[0];
-   	var formData = new FormData(form);
-
-   	$.ajax({
-   		data: formData,
-   		url: "{{ route('management.store') }}",
-   		method: "POST",
-   		dataType: 'JSON',
-   		
-          
-          success: function (data) {
-
-          	$('#memForm').trigger("reset");
-          	$('#ajaxModel').modal('hide');
-              table.draw();
-              
-
-          },
-          error: function (data) {
-          	console.log('Error:', data);
-          	$('#saveBtn').html('Save Changes');
-          }
-      });
-   });
+   
 
    $('body').on('click', '.deletemem', function () {
 
@@ -236,6 +214,9 @@
                 url: "{{ route('management.store') }}"+'/'+mem_id,
                 success: function (data) {
                     table.draw();
+                    $("#dresult").html(data).show();
+                    $("#result").html(data).hide();
+
                 },
                 error: function (data) {
                     console.log('Error:', data);

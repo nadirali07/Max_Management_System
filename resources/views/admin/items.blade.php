@@ -28,7 +28,9 @@
 <!-- body -->
 <div class="container-fluid" style="" >
 	<div class="container">
-		<div class="row py-5">
+    <div class="alert bg-success text-white text-center mt-5" id="result"  role="alert" style="display: none;"></div>
+         <div class="alert bg-danger text-white text-center mt-5" id="dresult"  role="alert" style="display: none;"></div>
+		<div class="row pb-5">
 			<div class="col-lg-12">
 				
 				<div class="card bg-transparent text-white" >
@@ -187,6 +189,8 @@
           	$('#itemForm').trigger("reset");
           	$('#ajaxModel').modal('hide');
               table.draw();
+              $("#dresult").html(data).hide();
+                    $("#result").html(data).show();
               
 
           },
@@ -207,6 +211,8 @@
                 url: "{{ route('items.store') }}"+'/'+item_id,
                 success: function (data) {
                     table.draw();
+                    $("#dresult").html(data).show();
+                    $("#result").html(data).hide();
                 },
                 error: function (data) {
                     console.log('Error:', data);

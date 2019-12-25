@@ -82,7 +82,7 @@ class ItemController extends Controller
     Item::updateOrCreate(['item_id' => $request->item_id],
         ['item_name' => $request->item_name, 'item_qty' => $request->item_qty, 'item_price' => $request->item_price, 'item_img' => $filename]);
 
-    return response()->json(['success'=>'Item saved successfully.']);
+    return response()->json(['Item saved successfully.']);
 }
 
     /**
@@ -130,6 +130,6 @@ class ItemController extends Controller
     {
         Item::find($id)->delete();
 
-        return response()->json(['success'=>'Item deleted successfully.']);
+        return response()->json(['Item deleted successfully.']);
     }
 }
